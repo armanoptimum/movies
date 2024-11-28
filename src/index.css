@@ -12,4 +12,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+body {
+  background-color: #011b32;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#logo {
+  width: 10rem;
+  height: 100%;
 }
