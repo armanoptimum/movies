@@ -18,7 +18,7 @@ const Header = () => {
         <NavItem source={plusIcon} />
         <NavItem>Lang-Icon</NavItem>
         <NavItem>Login</NavItem>
-        <NavItem>Login</NavItem>
+        <NavItem>Join TMDB</NavItem>
         <NavItem source={searchIcon} />
       </NavWrapper>
     </HeaderWrapper>
