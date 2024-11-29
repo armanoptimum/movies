@@ -1,6 +1,6 @@
-function NavItem({ children, href, dropdownItems, source, logo }) {
+function NavItem({ children, href, dropdownItems, source, logo, ...props }) {
   return (
-    <li>
+    <li {...props}>
       {logo ? (
         <a style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} href="/">
           <img src={source} alt="Logo" />
