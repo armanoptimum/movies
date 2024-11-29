@@ -19,6 +19,12 @@ export const HeaderNavWrapper = styled.ul`
   list-style-type: none;
   gap: 1.3rem;
 
+  &:nth-of-type(3) li:nth-child(2) a {
+   border: 1px solid #fff;
+   border-radius: 3px;
+   padding: 0.1rem 0.2rem;
+  }
+
   &:nth-of-type(1) li:nth-child(1),
   &:nth-of-type(1) li:nth-child(3),
   &:nth-of-type(1) li:nth-child(4),

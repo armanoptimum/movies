@@ -25,7 +25,7 @@ const Header = () => {
 
       <HeaderNavWrapper>
         <HeaderNavItem source={addIcon} />
-        <HeaderNavItem>Lang-Icon</HeaderNavItem>
+        <HeaderNavItem>EN</HeaderNavItem>
         <HeaderNavItem>Login</HeaderNavItem>
         <HeaderNavItem>Join TMDB</HeaderNavItem>
         <HeaderNavItem source={personIcon} />
