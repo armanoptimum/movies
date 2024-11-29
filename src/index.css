@@ -12,4 +12,32 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+
+  --primary-color: #042541;
+  --secondary-color: #05b4e4;
+  --text-color-dark: #000;
+  --text-color-light: #fff;
+  --text-color-muted: #666666;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --font-size-extra-small: 0.7rem;
+  --font-size-small: 0.9rem;
+  --font-size-medium: 1.3rem;
+  --font-size-large: 1.5rem;
+  --padding-large: 2rem;
+  --padding-medium: 1.3rem;
+  --padding-large-extra: 5rem;
+  --border-radius: 7px;
+  --transition: 0.3s;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
