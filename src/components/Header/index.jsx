@@ -5,31 +5,31 @@ import addIcon from '../../assets/add.svg';
 import logo from '../../assets/logo.svg';
 import burgerIcon from '../../assets/burger.svg';
 import logoMobile from '../../assets/logo2.svg';
-import NavItem from './NavItem';
+import HeaderNavItem from './HeaderNavItem';
 
 const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderNavWrapper>
-        <NavItem logo source={logo} />
-        <NavItem logo source={burgerIcon} />
-        <NavItem dropdownItems={['Popular', 'Now Playing', 'Upcoming', 'Top Rated']}> Movies </NavItem>
-        <NavItem dropdownItems={['Popular', 'Airing Today', 'On TV', 'Top Rated']}>TV Shows</NavItem>
-        <NavItem dropdownItems={['Popular People']}>People</NavItem>
-        <NavItem dropdownItems={['Discussion', 'LeaderBoard', 'Support', 'API']}>More</NavItem>
+        <HeaderNavItem logo source={logo} />
+        <HeaderNavItem logo source={burgerIcon} />
+        <HeaderNavItem dropdownItems={['Popular', 'Now Playing', 'Upcoming', 'Top Rated']}> Movies </HeaderNavItem>
+        <HeaderNavItem dropdownItems={['Popular', 'Airing Today', 'On TV', 'Top Rated']}>TV Shows</HeaderNavItem>
+        <HeaderNavItem dropdownItems={['Popular People']}>People</HeaderNavItem>
+        <HeaderNavItem dropdownItems={['Discussion', 'LeaderBoard', 'Support', 'API']}>More</HeaderNavItem>
       </HeaderNavWrapper>
 
       <HeaderNavWrapper>
-        <NavItem logo source={logoMobile} />
+        <HeaderNavItem logo source={logoMobile} />
       </HeaderNavWrapper>
 
       <HeaderNavWrapper>
-        <NavItem source={addIcon} />
-        <NavItem>Lang-Icon</NavItem>
-        <NavItem>Login</NavItem>
-        <NavItem>Join TMDB</NavItem>
-        <NavItem source={personIcon} />
-        <NavItem source={searchIcon} />
+        <HeaderNavItem source={addIcon} />
+        <HeaderNavItem>Lang-Icon</HeaderNavItem>
+        <HeaderNavItem>Login</HeaderNavItem>
+        <HeaderNavItem>Join TMDB</HeaderNavItem>
+        <HeaderNavItem source={personIcon} />
+        <HeaderNavItem source={searchIcon} />
       </HeaderNavWrapper>
     </HeaderWrapper>
   );

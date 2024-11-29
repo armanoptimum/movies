@@ -1,4 +1,4 @@
-function NavItem({ children, href, dropdownItems, source, logo, ...props }) {
+function HeaderNavItem({ children, href, dropdownItems, source, logo, ...props }) {
   return (
     <li {...props}>
       {logo ? (
@@ -24,4 +24,4 @@ function NavItem({ children, href, dropdownItems, source, logo, ...props }) {
   );
 }
 
-export default NavItem;
+export default HeaderNavItem;

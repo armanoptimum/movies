@@ -1,5 +1,5 @@
 import logo from '../../assets/logo2.svg';
-import FooterNavItem from './NavItem';
+import FooterNavItem from './FooterNavItem';
 import { FooterNavWrapper, FooterWrapper } from './styles';
 export default function Footer() {
   return (
