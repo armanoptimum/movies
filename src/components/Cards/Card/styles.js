@@ -7,7 +7,7 @@ const CardWrapper = styled.div`
   background-color: var(--text-color-light);
   border-radius: var(--border-radius);
   overflow: hidden;
-  font-size: var(--font-size-extra-small);
+  font-size: var(--font-size-small);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 

@@ -16,7 +16,7 @@ export const HeaderWrapper = styled.header`
   }
 
   #logo {
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
   }

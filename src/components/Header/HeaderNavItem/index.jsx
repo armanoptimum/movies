@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 function HeaderNavItem({ children, href, dropdownItems, source, logo, ...props }) {
   return (
@@ -17,7 +17,7 @@ function HeaderNavItem({ children, href, dropdownItems, source, logo, ...props }
         <ul className="dropdown">
           {dropdownItems.map((item, index) => (
             <li key={index}>
-              <NavLink to={item === 'Popular' ? `${(item).toLowerCase()}` : '#'}>{item}</NavLink>
+              <NavLink to={item === 'Popular' ? `${item.toLowerCase()}` : '#'}>{item}</NavLink>
             </li>
           ))}
         </ul>

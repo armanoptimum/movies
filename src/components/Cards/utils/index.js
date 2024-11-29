@@ -16,7 +16,8 @@ async function fetchData() {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMDk0NzczZTA3YzU1NDQzZDlkMGM0MGU5ZGJmOTM4OSIsIm5iZiI6MTczMjg4NzgzMC43NTg2NTU4LCJzdWIiOiI2NzQ5YzMyNTRhNDg0MTdiODQxNzgzMjEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.goSe6sug0KY0VrgSURm8IM2Gfb30d_sZJWjssktm00g'
+      Authorization:
+        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMDk0NzczZTA3YzU1NDQzZDlkMGM0MGU5ZGJmOTM4OSIsIm5iZiI6MTczMjg4NzgzMC43NTg2NTU4LCJzdWIiOiI2NzQ5YzMyNTRhNDg0MTdiODQxNzgzMjEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.goSe6sug0KY0VrgSURm8IM2Gfb30d_sZJWjssktm00g',
     },
   };
   try {

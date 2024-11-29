@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
+import { IMAGE_PREFIX, formatDate, fetchData } from './utils';
 import Card from './Card';
 import CardsWrapper from './styles';
-import { IMAGE_PREFIX, formatDate, fetchData } from './utils';
 
 export default function Cards() {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     (async () => {
       try {
-          const moviesData = await fetchData();
-          if (moviesData.length > 0) {
-            setMovies(moviesData);
-          }
+        const moviesData = await fetchData();
+        if (moviesData.length > 0) {
+          setMovies(moviesData);
+        }
       } catch (error) {
         console.log(error);
       }
