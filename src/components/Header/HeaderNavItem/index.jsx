@@ -1,21 +1,23 @@
+import { NavLink } from "react-router-dom";
+
 function HeaderNavItem({ children, href, dropdownItems, source, logo, ...props }) {
   return (
     <li {...props}>
       {logo ? (
-        <a style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} href="/">
+        <NavLink id="logo" to="/">
           <img src={source} alt="Logo" />
-        </a>
+        </NavLink>
       ) : source ? (
         <img src={source} alt={children} />
       ) : (
-        <a href={href || '#'}>{children}</a>
+        <NavLink to={href}>{children}</NavLink>
       )}
 
       {dropdownItems && (
         <ul className="dropdown">
           {dropdownItems.map((item, index) => (
             <li key={index}>
-              <a href="#">{item}</a>
+              <NavLink to={item === 'Popular' ? `${(item).toLowerCase()}` : '#'}>{item}</NavLink>
             </li>
           ))}
         </ul>

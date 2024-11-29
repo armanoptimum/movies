@@ -7,11 +7,11 @@ export const FooterWrapper = styled.footer`
   & nav {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 3rem;
+    padding: var(--padding-large);
     justify-content: center;
     gap: 50px;
-    background-color: #042541;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
   }
 
   & nav ul:nth-child(1) {
@@ -22,7 +22,7 @@ export const FooterWrapper = styled.footer`
     & nav {
       grid-template-columns: auto auto auto auto auto;
     }
-      
+
     & nav ul:nth-child(1) {
       text-align: end;
     }
@@ -31,22 +31,21 @@ export const FooterWrapper = styled.footer`
 
 export const FooterNavWrapper = styled.ul`
   list-style-type: none;
-    
+
   & img {
     width: 7rem;
   }
 
   & button {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: var(--font-size-medium);
     font-weight: 600;
-    color: #05B4E4;
+    color: var(--secondary-color);
     padding: 0.7rem 1rem;
-    border-radius: 0.5rem;
-    border: none; 
-    margin-top: 1rem;  
-    background-color: #fff;
+    border-radius: var(--border-radius);
+    border: none;
+    margin-top: 1rem;
+    background-color: var(--text-color-light);
     cursor: pointer;
   }
-}
 `;

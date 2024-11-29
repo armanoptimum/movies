@@ -2,14 +2,24 @@ import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #042541;
+  background-color: var(--primary-color);
   font-weight: 600;
-  font-size: 0.9rem;
-  color: white;
-  padding: 1.5rem;
+  font-size: var(--font-size-small);
+  color: var(--text-color-light);
+  padding: var(--padding-large);
   white-space: nowrap;
+
+  @media (min-width: 400px) {
+    padding: var(--padding-medium) var(--padding-large-extra);
+  }
+
+  #logo {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const HeaderNavWrapper = styled.ul`
@@ -20,9 +30,9 @@ export const HeaderNavWrapper = styled.ul`
   gap: 1.3rem;
 
   &:nth-of-type(3) li:nth-child(2) a {
-   border: 1px solid #fff;
-   border-radius: 3px;
-   padding: 0.1rem 0.2rem;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 0.1rem 0.2rem;
   }
 
   &:nth-of-type(1) li:nth-child(1),
