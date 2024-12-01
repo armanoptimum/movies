@@ -2,16 +2,21 @@ const IMAGE_PREFIX = 'https://media.themoviedb.org/t/p/w440_and_h660_face';
 
 function formatDate(dateString) {
   const date = new Date(dateString);
-  const formattedDate = new Intl.DateTimeFormat('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  }).format(date);
-  return formattedDate;
+  try {
+    const formattedDate = new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }).format(date);
+    return formattedDate;
+  } catch(err) {
+    return "Soon";
+  }
 }
 
-async function fetchData() {
-  const url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
+async function fetchData(page) {
+  console.log("fetch")
+  const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`;
   const options = {
     method: 'GET',
     headers: {
