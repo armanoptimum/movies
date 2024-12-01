@@ -9,13 +9,13 @@ function formatDate(dateString) {
       day: 'numeric',
     }).format(date);
     return formattedDate;
-  } catch(err) {
-    return "Soon";
+  } catch (err) {
+    return 'Soon';
   }
 }
 
 async function fetchData(page) {
-  console.log("fetch")
+  console.log('fetch');
   const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`;
   const options = {
     method: 'GET',

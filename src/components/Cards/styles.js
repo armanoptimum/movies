@@ -3,6 +3,10 @@ import styled from 'styled-components';
 const CardsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  padding-left: 0;
+  margin-top: 30px;
+
+
   gap: 2rem;
   width: 100%;
 
@@ -24,11 +28,13 @@ const CardsWrapper = styled.div`
     opacity: 0.8;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 890px) {
     grid-template-columns: 1fr 1fr;
+    padding-left: var(--padding-large);
+    margin-top: 0;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 1100px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 

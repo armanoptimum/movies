@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   background-color: var(--primary-color);
   font-weight: 600;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-small-plus);
   color: var(--text-color-light);
   padding: var(--padding-large);
   white-space: nowrap;

@@ -1,11 +1,23 @@
 import styled from 'styled-components';
 
 export const PopularMoviesWrapper = styled.main`
-  margin: 3rem 5rem;
+  padding: var(--padding-medium-plus);
   background-color: #fff;
 
   & > h2 {
     font-size: var(--font-size-large);
     padding: var(--padding-large) 0;
+  }
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (min-width: 890px) {
+      & .content {
+      flex-direction: row;
+    }
   }
 `;

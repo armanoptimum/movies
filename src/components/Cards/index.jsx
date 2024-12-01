@@ -13,7 +13,7 @@ export default function Cards() {
       try {
         const moviesData = await fetchData(page);
         if (moviesData.length > 0) {
-          setMovies((prevMovies) => [...prevMovies, ...moviesData]); 
+          setMovies((prevMovies) => [...prevMovies, ...moviesData]);
         }
       } catch (error) {
         console.log(error);
@@ -36,23 +36,25 @@ export default function Cards() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [movies])
+  }, [movies]);
 
-  function loadMoreHandler() { 
+  function loadMoreHandler() {
     setPage((prev) => prev + 1);
   }
 
   return (
     <CardsWrapper>
-      {movies.map((movie, id) => 
+      {movies.map((movie, id) => (
         <Card
-        key={id}
-        movieName={movie.title}
-        img={IMAGE_PREFIX + movie.poster_path}
-        date={formatDate(movie.release_date)}
-      />
-      )}
-      <button ref={buttonRef} onClick={loadMoreHandler}>Load More</button>
+          key={id}
+          movieName={movie.title}
+          img={IMAGE_PREFIX + movie.poster_path}
+          date={formatDate(movie.release_date)}
+        />
+      ))}
+      <button ref={buttonRef} onClick={loadMoreHandler}>
+        Load More
+      </button>
     </CardsWrapper>
   );
 }
