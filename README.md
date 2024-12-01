@@ -1,3 +1,3 @@
 # cd src
-# npm 
+# npm i
 # npm run dev
