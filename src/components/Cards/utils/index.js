@@ -15,7 +15,6 @@ function formatDate(dateString) {
 }
 
 async function fetchData(page) {
-  console.log('fetch');
   const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`;
   const options = {
     method: 'GET',
