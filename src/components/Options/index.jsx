@@ -6,7 +6,7 @@ export default function Options() {
     <OptionsWrapper>
       <Option>Sort</Option>
       <Option>Filters</Option>
-      <button className='search active'>Search</button>
+      <button className="search active">Search</button>
     </OptionsWrapper>
   );
 }

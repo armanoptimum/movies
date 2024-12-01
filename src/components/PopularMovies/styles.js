@@ -16,7 +16,7 @@ export const PopularMoviesWrapper = styled.main`
   }
 
   @media (min-width: 890px) {
-      & .content {
+    & .content {
       flex-direction: row;
     }
   }

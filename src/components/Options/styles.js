@@ -11,7 +11,7 @@ const OptionsWrapper = styled.div`
     width: 100%;
     border: none;
     border-radius: 50px;
-    padding:  var(--padding-small) var(--padding-medium);
+    padding: var(--padding-small) var(--padding-medium);
     font-size: var(--font-size-medium);
     color: var(--text-color-muted);
     font-weight: 600;
@@ -25,15 +25,10 @@ const OptionsWrapper = styled.div`
 
   & .search.active:hover {
     background-color: var(--primary-color);
-    }
-
-    @media (min-width: 460px) {
-         min-width: 20rem;
   }
 
-
-    
-    
-
+  @media (min-width: 460px) {
+    min-width: 20rem;
+  }
 `;
 export default OptionsWrapper;

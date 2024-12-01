@@ -6,7 +6,6 @@ const CardsWrapper = styled.div`
   padding-left: 0;
   margin-top: 30px;
 
-
   gap: 2rem;
   width: 100%;
 
