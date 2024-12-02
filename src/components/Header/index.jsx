@@ -6,16 +6,24 @@ import logo from '../../assets/logo.svg';
 import burgerIcon from '../../assets/burger.svg';
 import logoMobile from '../../assets/logo2.svg';
 import HeaderNavItem from './HeaderNavItem';
+import BurgerMenu from './HeaderBurgerMenu';
+import { useState } from 'react';
 
 const Header = () => {
+  const [burgerToggle, setBurgerToggle] = useState(false);
+
+  function handleBurgerToggle() {
+    setBurgerToggle((prev) => !prev);
+  }
+
   return (
     <HeaderWrapper>
+      <BurgerMenu burgerActive={burgerToggle} />
       <HeaderNavWrapper>
         <HeaderNavItem logo source={logo} />
-        <HeaderNavItem logo source={burgerIcon} />
+        <HeaderNavItem onClick={handleBurgerToggle} source={burgerIcon} />
         <HeaderNavItem href="popular" dropdownItems={['Popular', 'Now Playing', 'Upcoming', 'Top Rated']}>
-          {' '}
-          Movies{' '}
+          Movies
         </HeaderNavItem>
         <HeaderNavItem dropdownItems={['Popular Show', 'Airing Today', 'On TV', 'Top Rated']}>TV Shows</HeaderNavItem>
         <HeaderNavItem dropdownItems={['Popular People']}>People</HeaderNavItem>

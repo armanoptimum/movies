@@ -16,9 +16,7 @@ export default function PopularMovies() {
         const moviesData = await fetchData(page);
         if (moviesData.length > 0) {
           setMovies((prevMovies) => {
-            const newMovies = moviesData.filter(
-              (movie) => !prevMovies.some((prevMovie) => prevMovie.id === movie.id)
-            );
+            const newMovies = moviesData.filter((movie) => !prevMovies.some((prevMovie) => prevMovie.id === movie.id));
             return [...prevMovies, ...newMovies];
           });
         }
@@ -27,7 +25,7 @@ export default function PopularMovies() {
       }
     })();
   }, [page]);
-  
+
   function onSearchHandler() {
     setMovies(sortMovies(movies, activeSortOption));
   }
@@ -36,7 +34,11 @@ export default function PopularMovies() {
     <PopularMoviesWrapper>
       <h2>Popular Movies</h2>
       <div className="content">
-        <Options onSearchHandler={onSearchHandler} activeSortOption={activeSortOption} setActiveSortOption={setActiveSortOption} />
+        <Options
+          onSearchHandler={onSearchHandler}
+          activeSortOption={activeSortOption}
+          setActiveSortOption={setActiveSortOption}
+        />
         <Cards movies={movies} page={page} setPage={setPage} />
       </div>
     </PopularMoviesWrapper>

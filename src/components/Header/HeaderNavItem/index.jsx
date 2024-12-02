@@ -1,8 +1,12 @@
 import { NavLink } from 'react-router-dom';
 
-function HeaderNavItem({ children, href, dropdownItems, source, logo, ...props }) {
+function HeaderNavItem({ children, href, dropdownItems, onClick, source, logo, isActiveDropDown, ...props }) {
   return (
-    <li {...props}>
+    <li
+      onClick={onClick ? onClick : null}
+      className={isActiveDropDown ? 'parent-list active' : 'parent-list'}
+      {...props}
+    >
       {logo ? (
         <NavLink id="logo" to="/">
           <img src={source} alt="Logo" />

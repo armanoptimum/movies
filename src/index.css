@@ -14,6 +14,8 @@
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Source Sans Pro', Arial, sans-serif;
   --primary-color: #042541;
+  --primary-color-light: #032541;
+  --primary-color-burger: rgba(4, 38, 66, 0.9);
   --secondary-color: #05b4e4;
   --text-color-dark: #000;
   --text-color-light: #fff;

@@ -6,7 +6,6 @@ import options from './utils';
 export default function Option({ children, activeSortOption, setActiveSortOption }) {
   const [isOpenHeader, setIsOpenHeader] = useState(false);
   const [isOpenList, setIsOpenList] = useState(false);
-  
 
   function openHeaderHandler() {
     setIsOpenHeader((prev) => !prev);

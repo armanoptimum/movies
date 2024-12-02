@@ -18,10 +18,9 @@ export const sortMovies = (arr, activeOption) => {
     'Release Date': 'release_date',
   };
 
-  
   const parts = activeOption.split(' ');
-  const order = parts.pop(); 
-  const key = parts.join(' '); 
+  const order = parts.pop();
+  const key = parts.join(' ');
 
   const mappedKey = keyMapping[key];
   if (!mappedKey) return newarr;
