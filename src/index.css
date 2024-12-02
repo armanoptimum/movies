@@ -19,6 +19,7 @@
   --text-color-dark: #000;
   --text-color-light: #fff;
   --text-color-muted: #666666;
+  --text-color-muted-light: #dee2e6;
   --border-color: #e3e3e3;
   --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --font-size-extra-small: 0.7rem;
@@ -26,7 +27,7 @@
   --font-size-small-plus: 1rem;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.4rem;
-  --padding-large: 2rem;
+  --padding-small-extra: 0.7rem;
   --padding-small: 1rem;
   --padding-medium: 1.3rem;
   --padding-medium-plus: 4rem;

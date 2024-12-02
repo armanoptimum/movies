@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const PopularMoviesWrapper = styled.main`
-  padding: var(--padding-large-extra);
+  padding: var(--padding-medium) var(--padding-large);
   background-color: #fff;
 
   & > h2 {
     font-size: var(--font-size-large);
-    padding: var(--padding-large) 0;
+    padding: var(--padding-small) 0;
   }
 
   & .content {
