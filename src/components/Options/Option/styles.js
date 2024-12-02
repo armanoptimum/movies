@@ -82,6 +82,7 @@ const OptionWrapper = styled.div`
     padding: var(--padding-small) 0;
     box-shadow: var(--box-shadow);
   }
+
   #list.active {
     display: block;
   }
