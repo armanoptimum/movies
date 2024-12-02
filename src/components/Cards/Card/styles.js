@@ -28,12 +28,13 @@ const CardWrapper = styled.div`
   }
 
   .blur ul {
-    width: 80%;
+    width: 90%;
     background-color: white;
     list-style-type: none;
     position: absolute;
-    top: 30px;
-    left: 15px;
+    top: 2rem;
+    right: 5%;
+
     font-size: var(--font-size-small);
     color: var(--text-color-muted);
     text-align: center;
