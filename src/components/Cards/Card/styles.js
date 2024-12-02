@@ -11,6 +11,12 @@ const CardWrapper = styled.div`
   font-size: var(--font-size-extra-small);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  position: relative;
+
+  & #dots:hover {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(56%) saturate(700%) hue-rotate(176deg) brightness(95%)
+      contrast(105%);
+  }
 
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 3);
@@ -32,6 +38,14 @@ const CardWrapper = styled.div`
 
   & p {
     color: var(--text-color-muted);
+  }
+
+  #dots {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    fill: red;
   }
 `;
 
