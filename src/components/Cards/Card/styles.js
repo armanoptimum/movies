@@ -99,7 +99,7 @@ const CardWrapper = styled.div`
     font-weight: bold;
     justify-content: center; /* Center horizontally */
     align-items: center;
-    border: 2px solid #21D07A;
+    border: 2px solid #21d07a;
   }
 
   #per-cent {
