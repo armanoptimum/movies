@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainWrapper = styled.main`
-  width: 900px;
+  width: 100%;
   margin: auto;
 
   & h1 {

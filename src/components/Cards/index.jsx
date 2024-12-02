@@ -1,25 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
-import { IMAGE_PREFIX, formatDate, fetchData } from './utils';
+import { useEffect, useRef } from 'react';
+import { IMAGE_PREFIX, formatDate } from './utils';
 import Card from './Card';
 import CardsWrapper from './styles';
 
-export default function Cards() {
-  const [movies, setMovies] = useState([]);
-  const [page, setPage] = useState(1);
+export default function Cards({ page, setPage, movies }) {
   const buttonRef = useRef();
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const moviesData = await fetchData(page);
-        if (moviesData.length > 0) {
-          setMovies((prevMovies) => [...prevMovies, ...moviesData]);
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    })();
-  }, [page]);
 
   useEffect(() => {
     if (page === 1) return;
@@ -44,9 +29,9 @@ export default function Cards() {
 
   return (
     <CardsWrapper>
-      {movies.map((movie, id) => (
+      {movies.map((movie) => (
         <Card
-          key={id}
+          key={movie.id}
           movieName={movie.title}
           img={IMAGE_PREFIX + movie.poster_path}
           date={formatDate(movie.release_date)}

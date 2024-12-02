@@ -1,12 +1,12 @@
 import Option from './Option';
 import OptionsWrapper from './styles';
 
-export default function Options() {
+export default function Options({ activeSortOption, setActiveSortOption, onSearchHandler }) {
   return (
     <OptionsWrapper>
-      <Option>Sort</Option>
+      <Option activeSortOption={activeSortOption} setActiveSortOption={setActiveSortOption}>Sort</Option>
       <Option>Filters</Option>
-      <button className="search active">Search</button>
+      <button onClick={onSearchHandler} className="search active">Search</button>
     </OptionsWrapper>
   );
 }

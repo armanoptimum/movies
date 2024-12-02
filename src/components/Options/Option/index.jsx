@@ -3,10 +3,10 @@ import arrowRight from '../../../assets/arrow-right.svg';
 import { useState } from 'react';
 import options from './utils';
 
-export default function Option({ children }) {
+export default function Option({ children, activeSortOption, setActiveSortOption }) {
   const [isOpenHeader, setIsOpenHeader] = useState(false);
   const [isOpenList, setIsOpenList] = useState(false);
-  const [activeOption, setActiveOption] = useState(options[0]);
+  
 
   function openHeaderHandler() {
     setIsOpenHeader((prev) => !prev);
@@ -17,7 +17,7 @@ export default function Option({ children }) {
   }
 
   function listOptionClickHandler(event) {
-    setActiveOption(event.target.innerText);
+    setActiveSortOption(event.target.innerText);
   }
 
   return (
@@ -33,14 +33,14 @@ export default function Option({ children }) {
         <h5>{children} Results By</h5>
         <div onClick={openListHandler} id="list">
           <div className="current">
-            <p className="active">{activeOption}</p>
+            <p className="active">{activeSortOption}</p>
             <span className="drop list-drop">
               <img src={arrowRight} alt="options" />
             </span>
             <div onClick={listOptionClickHandler} className={isOpenList ? 'list-options active' : 'list-options'}>
               {children === 'Sort' &&
                 options.map((option, id) => (
-                  <p className={activeOption === option ? 'active' : ''} onClick={listOptionClickHandler} key={id}>
+                  <p className={activeSortOption === option ? 'active' : ''} onClick={listOptionClickHandler} key={id}>
                     {option}
                   </p>
                 ))}
