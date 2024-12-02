@@ -64,6 +64,7 @@ const CardWrapper = styled.div`
   }
 
   & .info {
+    position: relative;
     padding: var(--padding-medium);
   }
 
@@ -82,6 +83,30 @@ const CardWrapper = styled.div`
     right: 5px;
     width: 20px;
     fill: red;
+  }
+
+  .rating {
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    background-color: #081c22;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    color: var(--text-color-light);
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    border: 2px solid #21D07A;
+  }
+
+  #per-cent {
+    position: absolute;
+    font-size: 5px;
+    top: 4px;
+    right: 6px;
   }
 `;
 

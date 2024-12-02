@@ -2,7 +2,7 @@ import CardWrapper from './styles';
 import threeDots from '../../../assets/three-dots.svg';
 import { useState } from 'react';
 
-export default function Card({ movieName, date, img }) {
+export default function Card({ movieName, date, img, rating }) {
   const [action, setAction] = useState(false);
 
   function toggleBlure() {
@@ -22,6 +22,10 @@ export default function Card({ movieName, date, img }) {
       <img onClick={toggleBlure} id="dots" src={threeDots} alt="three dots" />
       <img id="movieImg" src={img} alt="" />
       <div className="info">
+        <div className="rating">
+          {rating}
+          <span id="per-cent">%</span>
+        </div>
         <h2>
           <a href="">{movieName}</a>
         </h2>

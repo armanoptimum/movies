@@ -34,6 +34,7 @@ export default function Cards({ page, setPage, movies }) {
           key={movie.id}
           movieName={movie.title}
           img={IMAGE_PREFIX + movie.poster_path}
+          rating={Math.ceil(movie.vote_average * 10)}
           date={formatDate(movie.release_date)}
         />
       ))}

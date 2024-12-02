@@ -5,7 +5,6 @@ const CardsWrapper = styled.div`
   grid-template-columns: 1fr;
   padding-left: 0;
   margin-top: 3rem;
-
   gap: 2rem;
   width: 100%;
 
