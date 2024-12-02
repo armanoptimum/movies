@@ -41,6 +41,7 @@ const OptionWrapper = styled.div`
   & .action h5 {
     font-weight: 300;
     margin-bottom: 1rem;
+    color: var(--text-color-muted);
   }
 
   #list {
