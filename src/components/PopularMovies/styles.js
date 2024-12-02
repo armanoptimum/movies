@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PopularMoviesWrapper = styled.main`
-  padding: var(--padding-medium-plus);
+  padding: var(--padding-large-extra);
   background-color: #fff;
 
   & > h2 {

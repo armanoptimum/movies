@@ -8,7 +8,8 @@ const OptionWrapper = styled.div`
   font-size: var(--font-size-extra-small);
   padding: var(--padding-small) var(--padding-medium);
   border-radius: 10px;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(----box-shadow)
 `;
 
 export default OptionWrapper;

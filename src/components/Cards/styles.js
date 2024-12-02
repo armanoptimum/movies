@@ -11,7 +11,7 @@ const CardsWrapper = styled.div`
 
   & button {
     grid-column: 1 / -1;
-    padding: var(--padding-medium);
+    padding: var(--padding-small);
     background-color: var(--secondary-color);
     color: var(--text-color-light);
     border: none;
