@@ -22,6 +22,42 @@ const CardWrapper = styled.div`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 3);
   }
 
+  .blur {
+    position: relative;
+    display: none;
+  }
+
+  .blur ul {
+    width: 80%;
+    background-color: white;
+    list-style-type: none;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    font-size: var(--font-size-small);
+    color: var(--text-color-muted);
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .blur ul li {
+    padding: var(--padding-small-extra);
+    border-bottom: 0.01rem solid var(--text-color-muted);
+  }
+
+  .blur ul li:hover {
+    background-color: var(--primary-color-light);
+    color: var(--text-color-light);
+  }
+
+  .blur.active {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+  }
+
   & img {
     display: inline-block;
     width: 100%;
