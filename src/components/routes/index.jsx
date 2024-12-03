@@ -3,6 +3,7 @@ import Header from '../Header/index.jsx';
 import Footer from '../Footer/index.jsx';
 import PopularMovies from '../PopularMovies/index.jsx';
 import Main from '../Main/index.jsx';
+import MovieProvider from '../PopularMovies/utils/moviePrivider.jsx';
 
 function AppRouter() {
   return (
@@ -10,7 +11,14 @@ function AppRouter() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/popular" element={<PopularMovies />} />
+        <Route
+          path="/popular"
+          element={
+            <MovieProvider>
+              <PopularMovies />
+            </MovieProvider>
+          }
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

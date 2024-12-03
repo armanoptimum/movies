@@ -15,7 +15,7 @@ export default function BurgerMenu({ burgerActive }) {
     });
   }
   return (
-    <BurgerMenuWrapper show={burgerActive ? 'show' : ''}>
+    <BurgerMenuWrapper $show={burgerActive ? 'show' : ''}>
       <ul>
         <HeaderNavItem
           onClick={() => toggleDropdown(0)}

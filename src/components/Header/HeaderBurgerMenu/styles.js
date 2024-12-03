@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const BurgerMenuWrapper = styled.div`
-  display: ${({ show }) => {
-    return show ? 'block' : 'none';
+  display: ${({ $show }) => {
+    return $show ? 'block' : 'none';
   }};
   position: absolute;
   top: 70px;

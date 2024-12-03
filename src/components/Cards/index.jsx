@@ -1,9 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { IMAGE_PREFIX, formatDate } from './utils';
 import Card from './Card';
 import CardsWrapper from './styles';
+import { MovieContex } from '../PopularMovies/utils/moviePrivider';
 
-export default function Cards({ page, setPage, movies }) {
+export default function Cards() {
+  const { page, setPage, movies } = useContext(MovieContex);
   const buttonRef = useRef();
 
   useEffect(() => {

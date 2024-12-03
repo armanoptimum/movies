@@ -1,14 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import Cards from '../Cards';
 import Options from '../Options';
 import { PopularMoviesWrapper } from './styles';
-import options, { sortMovies } from '../Options/Option/utils';
+import { sortMovies } from '../Options/Option/utils';
 import { fetchData } from '../Cards/utils';
+import { MovieContex } from './utils/moviePrivider';
 
 export default function PopularMovies() {
-  const [activeSortOption, setActiveSortOption] = useState(options[0]);
-  const [page, setPage] = useState(1);
-  const [movies, setMovies] = useState([]);
+  const { activeSortOption, page, movies, setMovies } = useContext(MovieContex);
 
   useEffect(() => {
     (async () => {
@@ -24,7 +23,7 @@ export default function PopularMovies() {
         console.log(error);
       }
     })();
-  }, [page]);
+  }, [page, setMovies]);
 
   function onSearchHandler() {
     setMovies(sortMovies(movies, activeSortOption));
@@ -34,12 +33,8 @@ export default function PopularMovies() {
     <PopularMoviesWrapper>
       <h2>Popular Movies</h2>
       <div className="content">
-        <Options
-          onSearchHandler={onSearchHandler}
-          activeSortOption={activeSortOption}
-          setActiveSortOption={setActiveSortOption}
-        />
-        <Cards movies={movies} page={page} setPage={setPage} />
+        <Options onSearchHandler={onSearchHandler} />
+        <Cards />
       </div>
     </PopularMoviesWrapper>
   );
