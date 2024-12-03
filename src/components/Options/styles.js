@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const OptionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 10rem;
+  min-width: 9rem;
   gap: 2rem;
 
   & .search {
@@ -12,7 +12,7 @@ const OptionsWrapper = styled.div`
     border: none;
     border-radius: 50px;
     padding: var(--padding-small) var(--padding-medium);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
     color: var(--text-color-muted);
     font-weight: 600;
     cursor: pointer;
@@ -28,7 +28,7 @@ const OptionsWrapper = styled.div`
   }
 
   @media (min-width: 460px) {
-    min-width: 20rem;
+    min-width: 16rem;
   }
 `;
 export default OptionsWrapper;

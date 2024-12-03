@@ -28,19 +28,15 @@ const CardsWrapper = styled.div`
 
   @media (min-width: 890px) {
     grid-template-columns: 1fr 1fr;
-    padding-left: var(--padding-large);
+    padding-left: var(--padding-medium);
     margin-top: 0;
   }
 
   @media (min-width: 1100px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  @media (min-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  @media (min-width: 1600px) {
+  @media (min-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 `;

@@ -38,6 +38,18 @@ const CardWrapper = styled.div`
     backdrop-filter: blur(20px);
   }
 
+  & #description {
+    width: 100%;
+    margin-top: 1rem;
+    display: none;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-color-dark);
+    font-size: var(--font-size-small);
+  }
+
   .blur ul {
     width: 90%;
     background-color: white;
@@ -87,6 +99,20 @@ const CardWrapper = styled.div`
     font-size: 5px;
     top: 4px;
     right: 6px;
+  }
+
+  @media (max-width: 890px) {
+    flex-direction: row;
+    height: 10rem;
+
+    .rating,
+    #dots {
+      display: none;
+    }
+
+    #description {
+      display: -webkit-box;
+    }
   }
 `;
 

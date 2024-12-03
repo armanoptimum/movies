@@ -4,7 +4,7 @@ import { useState } from 'react';
 import CardItem from './CardItem';
 import { itemData } from '../utils';
 
-export default function Card({ movieName, date, img, rating }) {
+export default function Card({ movieName, description, date, img, rating }) {
   const [action, setAction] = useState(false);
 
   function toggleBlure() {
@@ -31,6 +31,7 @@ export default function Card({ movieName, date, img, rating }) {
           <a href="">{movieName}</a>
         </h2>
         <p>{date}</p>
+        <p id="description">{description}</p>
       </div>
     </CardWrapper>
   );

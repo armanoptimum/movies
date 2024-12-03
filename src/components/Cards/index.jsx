@@ -39,6 +39,7 @@ export default function Cards() {
           img={IMAGE_PREFIX + movie.poster_path}
           rating={Math.ceil(movie.vote_average * 10)}
           date={formatDate(movie.release_date)}
+          description={movie.overview}
         />
       ))}
       <button id="load-more" ref={buttonRef} onClick={loadMoreHandler}>

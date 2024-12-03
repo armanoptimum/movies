@@ -24,7 +24,7 @@
   --border-color: #e3e3e3;
   --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --font-size-extra-small: 0.7rem;
-  --font-size-small: 0.8rem;
+  --font-size-small: 0.9rem;
   --font-size-small-plus: 1rem;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.4rem;
@@ -34,6 +34,7 @@
   --padding-medium-plus: 4rem;
   --padding-large: 4.5rem;
   --padding-large-extra: 5rem;
+  --padding-huge: 13rem;
   --border-radius: 7px;
   --transition: 0.3s;
 }

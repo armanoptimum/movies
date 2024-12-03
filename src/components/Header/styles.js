@@ -6,15 +6,15 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   background-color: var(--primary-color);
   font-weight: 600;
-  font-size: var(--font-size-small-plus);
+  font-size: var(--font-size-small);
   color: var(--text-color-light);
-  padding: var(--padding-medium);
+  padding: var(--padding-small-extra);
   white-space: nowrap;
   position: relative;
   top: 0;
 
   @media (min-width: 1000px) {
-    padding: var(--padding-medium) var(--padding-large);
+    padding: var(--padding-small) var(--padding-large);
   }
 
   #logo {

@@ -28,6 +28,11 @@ const OptionWrapper = styled.div`
     font-size: var(--font-size-medium);
   }
 
+  & .name {
+    font-size: var(--font-size-small-plus);
+    font-weight: 600;
+  }
+
   & .action,
   & hr {
     display: none;

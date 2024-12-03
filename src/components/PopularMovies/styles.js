@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PopularMoviesWrapper = styled.main`
-  padding: var(--padding-medium) var(--padding-large);
+  padding: var(--padding-medium);
   background-color: #fff;
 
   & > h2 {
@@ -16,6 +16,7 @@ export const PopularMoviesWrapper = styled.main`
   }
 
   @media (min-width: 890px) {
+    padding: var(--padding-medium) var(--padding-large);
     & .content {
       flex-direction: row;
     }
