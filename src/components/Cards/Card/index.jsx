@@ -15,7 +15,9 @@ export default function Card({ movieName, date, img, rating }) {
     <CardWrapper>
       <div className={action ? 'blur active' : 'blur'}>
         <ul>
-          {itemData.map((item, index) => <CardItem key={index} img={item.img} name={item.name} />)}
+          {itemData.map((item, index) => (
+            <CardItem key={index} img={item.img} name={item.name} />
+          ))}
         </ul>
       </div>
       <img onClick={toggleBlure} id="dots" src={threeDots} alt="three dots" />

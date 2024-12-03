@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const CardItemWrapper = styled.li`
     padding: var(--padding-small-extra);
@@ -22,6 +22,6 @@ const CardItemWrapper = styled.li`
     color: var(--text-color-light);
     }
   }
-`
+`;
 
 export default CardItemWrapper;

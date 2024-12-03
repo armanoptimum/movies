@@ -13,7 +13,6 @@ const CardWrapper = styled.div`
   cursor: pointer;
   position: relative;
 
-    
   #dots {
     position: absolute;
     top: 5px;
@@ -23,14 +22,14 @@ const CardWrapper = styled.div`
 
   #dots:hover {
     filter: brightness(0) saturate(100%) invert(45%) sepia(56%) saturate(700%) hue-rotate(176deg) brightness(95%)
-    contrast(105%);
+      contrast(105%);
   }
 
   .blur {
     position: relative;
     display: none;
   }
-  
+
   .blur.active {
     position: absolute;
     display: block;
@@ -38,7 +37,7 @@ const CardWrapper = styled.div`
     height: 100%;
     backdrop-filter: blur(20px);
   }
-    
+
   .blur ul {
     width: 90%;
     background-color: white;

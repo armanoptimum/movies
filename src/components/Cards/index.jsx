@@ -23,6 +23,7 @@ export default function Cards() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movies]);
 
   function loadMoreHandler() {
@@ -40,7 +41,7 @@ export default function Cards() {
           date={formatDate(movie.release_date)}
         />
       ))}
-      <button id='load-more' ref={buttonRef} onClick={loadMoreHandler}>
+      <button id="load-more" ref={buttonRef} onClick={loadMoreHandler}>
         <span>Load More</span>
       </button>
     </CardsWrapper>
