@@ -13,15 +13,7 @@ const CardWrapper = styled.div`
   cursor: pointer;
   position: relative;
 
-  & #dots:hover {
-    filter: brightness(0) saturate(100%) invert(45%) sepia(56%) saturate(700%) hue-rotate(176deg) brightness(95%)
-      contrast(105%);
-  }
-
-  &:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 3);
-  }
-
+    
   #dots {
     position: absolute;
     top: 5px;
@@ -29,47 +21,16 @@ const CardWrapper = styled.div`
     width: 20px;
   }
 
+  #dots:hover {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(56%) saturate(700%) hue-rotate(176deg) brightness(95%)
+    contrast(105%);
+  }
+
   .blur {
     position: relative;
     display: none;
   }
-
-  .blur ul {
-    width: 90%;
-    background-color: white;
-    list-style-type: none;
-    position: absolute;
-    top: 2rem;
-    right: 5%;
-
-    font-size: var(--font-size-small);
-    color: var(--text-color-muted);
-    text-align: center;
-    border-radius: 5px;
-  }
-
-  .blur ul li {
-    padding: var(--padding-small-extra);
-    border-bottom: 0.01rem solid var(--text-color-muted);
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .blur ul li img {
-    width: 10%;
-  }
-
-  .blur ul li:hover img {
-    filter: brightness(0) saturate(100%) invert(100%);
-  }
-
-  .blur ul li:hover {
-    background-color: var(--primary-color-light);
-    color: var(--text-color-light);
-  }
-
+  
   .blur.active {
     position: absolute;
     display: block;
@@ -77,10 +38,18 @@ const CardWrapper = styled.div`
     height: 100%;
     backdrop-filter: blur(20px);
   }
-
-  & img {
-    display: inline-block;
-    width: 100%;
+    
+  .blur ul {
+    width: 90%;
+    background-color: white;
+    list-style-type: none;
+    position: absolute;
+    top: 2rem;
+    right: 5%;
+    font-size: var(--font-size-small);
+    color: var(--text-color-muted);
+    text-align: center;
+    border-radius: 5px;
   }
 
   & .info {

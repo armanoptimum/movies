@@ -1,10 +1,8 @@
 import CardWrapper from './styles';
 import threeDots from '../../../assets/three-dots.svg';
-import listImg from '../../../assets/list.svg';
-import favoriteImg from '../../../assets/favorite.svg';
-import bookMarkImg from '../../../assets/bookMark.svg';
-import starImg from '../../../assets/star.svg';
 import { useState } from 'react';
+import CardItem from './CardItem';
+import { itemData } from '../utils';
 
 export default function Card({ movieName, date, img, rating }) {
   const [action, setAction] = useState(false);
@@ -14,25 +12,10 @@ export default function Card({ movieName, date, img, rating }) {
   }
 
   return (
-    <CardWrapper className="card">
+    <CardWrapper>
       <div className={action ? 'blur active' : 'blur'}>
         <ul>
-          <li>
-            <img src={listImg} alt="list image" />
-            <span>Add to list</span>
-          </li>
-          <li>
-            <img src={favoriteImg} alt="favorites" />
-            <span>Favorite</span>
-          </li>
-          <li>
-            <img src={bookMarkImg} alt="bookmark" />
-            <span>Watchlist</span>
-          </li>
-          <li>
-            <img src={starImg} alt="rating" />
-            <span>Your Rating</span>
-          </li>
+          {itemData.map((item, index) => <CardItem key={index} img={item.img} name={item.name} />)}
         </ul>
       </div>
       <img onClick={toggleBlure} id="dots" src={threeDots} alt="three dots" />

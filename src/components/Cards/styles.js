@@ -8,13 +8,12 @@ const CardsWrapper = styled.div`
   gap: 2rem;
   width: 100%;
 
-  & button {
+  #load-more {
     grid-column: 1 / -1;
     padding: var(--padding-small);
     background-color: var(--secondary-color);
     color: var(--text-color-light);
     border: none;
-    cursor: pointer;
     font-size: var(--font-size-large);
     font-weight: bold;
     border-radius: var(--border-radius);
@@ -22,8 +21,9 @@ const CardsWrapper = styled.div`
     transition: background-color var(--transition);
   }
 
-  button:hover {
-    opacity: 0.8;
+  #load-more span:hover {
+    cursor: pointer;
+    color: var(--primary-color);
   }
 
   @media (min-width: 890px) {

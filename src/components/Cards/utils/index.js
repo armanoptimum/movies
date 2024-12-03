@@ -1,4 +1,28 @@
+import listImg from '../../../assets/list.svg';
+import favoriteImg from '../../../assets/favorite.svg';
+import bookmarkImg from '../../../assets/bookMark.svg';
+import starImg from '../../../assets/star.svg';
+
 const IMAGE_PREFIX = 'https://media.themoviedb.org/t/p/w440_and_h660_face';
+
+const itemData = [
+    {
+        img: listImg,
+        name: 'Add to list',
+    },
+    {
+        img: favoriteImg,
+        name: 'Favorites',
+    },
+    {
+        img: bookmarkImg,
+        name: 'Bookmark',
+    },
+    {
+        img: starImg,
+        name: 'Rating',
+    }
+]
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -10,6 +34,7 @@ function formatDate(dateString) {
     }).format(date);
     return formattedDate;
   } catch (err) {
+    console.error(err);
     return 'Soon';
   }
 }
@@ -37,4 +62,4 @@ async function fetchData(page) {
   }
 }
 
-export { IMAGE_PREFIX, formatDate, fetchData };
+export { IMAGE_PREFIX, formatDate, fetchData, itemData };

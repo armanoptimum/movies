@@ -40,8 +40,8 @@ export default function Cards() {
           date={formatDate(movie.release_date)}
         />
       ))}
-      <button ref={buttonRef} onClick={loadMoreHandler}>
-        Load More
+      <button id='load-more' ref={buttonRef} onClick={loadMoreHandler}>
+        <span>Load More</span>
       </button>
     </CardsWrapper>
   );
