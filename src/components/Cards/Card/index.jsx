@@ -1,5 +1,9 @@
 import CardWrapper from './styles';
 import threeDots from '../../../assets/three-dots.svg';
+import listImg from '../../../assets/list.svg';
+import favoriteImg from '../../../assets/favorite.svg';
+import bookMarkImg from '../../../assets/bookMark.svg';
+import starImg from '../../../assets/star.svg';
 import { useState } from 'react';
 
 export default function Card({ movieName, date, img, rating }) {
@@ -13,10 +17,22 @@ export default function Card({ movieName, date, img, rating }) {
     <CardWrapper className="card">
       <div className={action ? 'blur active' : 'blur'}>
         <ul>
-          <li>Add to list</li>
-          <li>Favorite</li>
-          <li>Watchlist</li>
-          <li>Your Rating</li>
+          <li>
+            <img src={listImg} alt="list image" />
+            <span>Add to list</span>
+          </li>
+          <li>
+            <img src={favoriteImg} alt="favorites" />
+            <span>Favorite</span>
+          </li>
+          <li>
+            <img src={bookMarkImg} alt="bookmark" />
+            <span>Watchlist</span>
+          </li>
+          <li>
+            <img src={starImg} alt="rating" />
+            <span>Your Rating</span>
+          </li>
         </ul>
       </div>
       <img onClick={toggleBlure} id="dots" src={threeDots} alt="three dots" />

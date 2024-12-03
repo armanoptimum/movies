@@ -22,6 +22,13 @@ const CardWrapper = styled.div`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 3);
   }
 
+  #dots {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+  }
+
   .blur {
     position: relative;
     display: none;
@@ -44,6 +51,18 @@ const CardWrapper = styled.div`
   .blur ul li {
     padding: var(--padding-small-extra);
     border-bottom: 0.01rem solid var(--text-color-muted);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .blur ul li img {
+    width: 10%;
+  }
+
+  .blur ul li:hover img {
+    filter: brightness(0) saturate(100%) invert(100%);
   }
 
   .blur ul li:hover {
@@ -76,14 +95,6 @@ const CardWrapper = styled.div`
 
   & p {
     color: var(--text-color-muted);
-  }
-
-  #dots {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 20px;
-    fill: red;
   }
 
   .rating {
