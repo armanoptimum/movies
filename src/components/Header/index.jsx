@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [burgerToggle, setBurgerToggle] = useState(false);
-  const [isSticky, setIsSticky] = useState(true)
+  const [isSticky, setIsSticky] = useState(true);
 
   function handleBurgerToggle() {
     setBurgerToggle((prev) => !prev);
@@ -20,17 +20,17 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 70) {
-        setIsSticky(false)
+        setIsSticky(false);
       } else {
-        setIsSticky(true)
+        setIsSticky(true);
       }
-    }
+    };
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    }
+    };
   }, []);
 
   return (

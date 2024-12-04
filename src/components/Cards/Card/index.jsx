@@ -7,9 +7,9 @@ import { itemData } from '../utils';
 export default function Card({ movieName, description, date, img, rating }) {
   const [action, setAction] = useState(false);
 
-  function toggleBlure() {
+  const toggleBlure = () => {
     setAction((prev) => !prev);
-  }
+  };
 
   return (
     <CardWrapper>

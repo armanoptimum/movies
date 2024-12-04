@@ -25,9 +25,9 @@ export default function PopularMovies() {
     })();
   }, [page, setMovies]);
 
-  function onSearchHandler() {
+  const onSearchHandler = () => {
     setMovies(sortMovies(movies, activeSortOption));
-  }
+  };
 
   return (
     <PopularMoviesWrapper>

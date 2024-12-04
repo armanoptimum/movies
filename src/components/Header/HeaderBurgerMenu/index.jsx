@@ -5,7 +5,7 @@ import BurgerMenuWrapper from './styles';
 export default function BurgerMenu({ burgerActive }) {
   const [activeDropdowns, setActiveDropdowns] = useState([]);
 
-  function toggleDropdown(index) {
+  const toggleDropdown = (index) => {
     setActiveDropdowns((prev) => {
       if (prev.includes(index)) {
         return prev.filter((item) => item !== index);
@@ -13,7 +13,7 @@ export default function BurgerMenu({ burgerActive }) {
         return [...prev, index];
       }
     });
-  }
+  };
   return (
     <BurgerMenuWrapper $show={burgerActive ? 'show' : ''}>
       <ul>

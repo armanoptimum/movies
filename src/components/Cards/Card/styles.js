@@ -39,7 +39,6 @@ const CardWrapper = styled.div`
     z-index: 10;
   }
 
-
   & #description {
     width: 100%;
     margin-top: 1rem;

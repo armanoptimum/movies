@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from 'react';
-import { IMAGE_PREFIX, formatDate } from './utils';
+import { IMAGE_PREFIX, formatDate, calculateRating } from './utils';
 import Card from './Card';
 import CardsWrapper from './styles';
 import { MovieContex } from '../PopularMovies/utils/moviePrivider';
@@ -26,9 +26,9 @@ export default function Cards() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movies]);
 
-  function loadMoreHandler() {
+  const loadMoreHandler = () => {
     setPage((prev) => prev + 1);
-  }
+  };
 
   return (
     <CardsWrapper>
@@ -37,7 +37,7 @@ export default function Cards() {
           key={movie.id}
           movieName={movie.title}
           img={IMAGE_PREFIX + movie.poster_path}
-          rating={Math.ceil(movie.vote_average * 10)}
+          rating={calculateRating(movie.vote_average)}
           date={formatDate(movie.release_date)}
           description={movie.overview}
         />

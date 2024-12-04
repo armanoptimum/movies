@@ -24,7 +24,7 @@ const itemData = [
   },
 ];
 
-function formatDate(dateString) {
+const formatDate = (dateString) => {
   const date = new Date(dateString);
   try {
     const formattedDate = new Intl.DateTimeFormat('en-US', {
@@ -37,9 +37,13 @@ function formatDate(dateString) {
     console.error(err);
     return 'Soon';
   }
-}
+};
 
-async function fetchData(page) {
+const calculateRating = (data) => {
+  return Math.ceil(data * 10);
+};
+
+const fetchData = async (page) => {
   const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`;
   const options = {
     method: 'GET',
@@ -60,6 +64,6 @@ async function fetchData(page) {
     console.error('Error fetching data:', error);
     return [];
   }
-}
+};
 
-export { IMAGE_PREFIX, formatDate, fetchData, itemData };
+export { IMAGE_PREFIX, formatDate, fetchData, itemData, calculateRating };

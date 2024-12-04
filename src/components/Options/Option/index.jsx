@@ -7,17 +7,17 @@ export default function Option({ children, activeSortOption, setActiveSortOption
   const [isOpenHeader, setIsOpenHeader] = useState(false);
   const [isOpenList, setIsOpenList] = useState(false);
 
-  function openHeaderHandler() {
+  const openHeaderHandler = () => {
     setIsOpenHeader((prev) => !prev);
-  }
+  };
 
-  function openListHandler() {
+  const openListHandler = () => {
     setIsOpenList((prev) => !prev);
-  }
+  };
 
-  function listOptionClickHandler(event) {
+  const listOptionClickHandler = (event) => {
     setActiveSortOption(event.target.innerText);
-  }
+  };
 
   return (
     <OptionWrapper>

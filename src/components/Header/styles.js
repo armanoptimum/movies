@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
-   display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--primary-color);
@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.header`
   white-space: nowrap;
   transition: top 0.5s ease;
   position: sticky;
-  top: ${({ $sticky }) => ($sticky ? '0' : '-100px')}; 
+  top: ${({ $sticky }) => ($sticky ? '0' : '-100px')};
 
   @media (min-width: 1000px) {
     padding: var(--padding-small) var(--padding-large);
