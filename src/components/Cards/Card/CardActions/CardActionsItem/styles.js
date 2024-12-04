@@ -21,15 +21,11 @@ const CardActionsItemWrapper = styled.li`
 `;
 
 const CardActionsImg = styled.img`
-    width: 13%;
-`
+  width: 13%;
+`;
 
 const CardActionsTitle = styled.span`
-    font-size: var(--font-size-small)
-`
+  font-size: var(--font-size-small);
+`;
 
-export {
-    CardActionsItemWrapper,
-    CardActionsImg,
-    CardActionsTitle,   
-}
+export { CardActionsItemWrapper, CardActionsImg, CardActionsTitle };

@@ -44,7 +44,7 @@ const Header = () => {
         <HeaderNavItem dropdownItems={['Popular Show', 'Airing Today', 'On TV', 'Top Rated']}>TV Shows</HeaderNavItem>
         <HeaderNavItem dropdownItems={['Popular People']}>People</HeaderNavItem>
         <HeaderNavItem dropdownItems={['Discussion', 'LeaderBoard', 'Support', 'API']}>More</HeaderNavItem>
-      <BurgerMenu burgerActive={burgerToggle} />
+        <BurgerMenu burgerActive={burgerToggle} />
       </HeaderNavWrapper>
 
       <HeaderNavWrapper>

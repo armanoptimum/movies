@@ -24,8 +24,4 @@ const Content = styled.div`
   }
 `;
 
-export {
-  Wrapper,
-  Title,
-  Content
-}
+export { Wrapper, Title, Content };

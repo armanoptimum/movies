@@ -10,11 +10,11 @@ export default function Card({ movieName, description, date, img, rating }) {
   const toggleBlure = () => {
     setActive((prev) => !prev);
   };
-  
+
   return (
     <CardWrapper>
       <CardActions active={active} />
-      <ThreeDots  onClick={toggleBlure} src={threeDots} alt="three dots"  />
+      <ThreeDots onClick={toggleBlure} src={threeDots} alt="three dots" />
       <MovieImg src={img} alt={movieName} />
       <MovieInfo movieName={movieName} description={description} date={date} rating={rating} />
     </CardWrapper>

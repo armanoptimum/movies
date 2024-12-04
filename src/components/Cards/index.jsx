@@ -42,7 +42,9 @@ export default function Cards() {
           description={movie.overview}
         />
       ))}
-      <LoadMoreButton ref={buttonRef} onClick={loadMoreHandler}><LoadMoreText>Load More</LoadMoreText></LoadMoreButton>
+      <LoadMoreButton ref={buttonRef} onClick={loadMoreHandler}>
+        <LoadMoreText>Load More</LoadMoreText>
+      </LoadMoreButton>
     </CardsWrapper>
   );
 }

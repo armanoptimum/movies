@@ -80,23 +80,13 @@ const OptionItem = styled.p`
   font-size: var(--font-size-small-plus);
   background-color: ${({ $active }) => ($active ? 'var(--secondary-color)' : 'transparent')};
   color: ${({ $active }) => ($active ? 'var(--text-color-light)' : 'inherit')};
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 
   &:hover {
     background-color: ${({ active }) => (active ? 'var(--primary-color)' : 'var(--text-color-muted-light)')};
   }
 `;
 
-
-export {
-  OptionItem,
-  ListOptions,
-  Current,
-  List,
-  Action,
-  Divider,
-  Drop,
-  Name,
-  Header,
-  Wrapper
-}
+export { OptionItem, ListOptions, Current, List, Action, Divider, Drop, Name, Header, Wrapper };

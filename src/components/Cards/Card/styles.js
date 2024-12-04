@@ -13,12 +13,10 @@ export const CardWrapper = styled.div`
   cursor: pointer;
   position: relative;
 
-
   @media (max-width: 890px) {
     flex-direction: row;
     height: 10rem;
   }
-    
 `;
 export const ThreeDots = styled.img`
     position: absolute;
@@ -35,9 +33,6 @@ export const ThreeDots = styled.img`
   &:hover {
     filter: brightness(0) saturate(100%) invert(45%) sepia(56%) saturate(700%) hue-rotate(176deg) brightness(95%)
     contrast(105%);
-`
+`;
 
 export const MovieImg = styled.img``;
-
-
-

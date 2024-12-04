@@ -29,7 +29,4 @@ const SearchButton = styled.button`
   }
 `;
 
-export {
-  Wrapper,
-  SearchButton
-}
+export { Wrapper, SearchButton };

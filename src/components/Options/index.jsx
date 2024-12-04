@@ -8,9 +8,13 @@ export default function Options({ onSearchHandler }) {
 
   return (
     <Wrapper>
-      <Option activeSortOption={activeSortOption} setActiveSortOption={setActiveSortOption}>Sort</Option>
+      <Option activeSortOption={activeSortOption} setActiveSortOption={setActiveSortOption}>
+        Sort
+      </Option>
       <Option>Filters</Option>
-      <SearchButton onClick={onSearchHandler} $active>Search</SearchButton>
+      <SearchButton onClick={onSearchHandler} $active>
+        Search
+      </SearchButton>
     </Wrapper>
   );
 }
