@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from 'react';
 import { IMAGE_PREFIX, formatDate, calculateRating } from './utils';
 import Card from './Card';
-import CardsWrapper from './styles';
+import { CardsWrapper, LoadMoreButton, LoadMoreText } from './styles';
 import { MovieContex } from '../PopularMovies/utils/moviePrivider';
 
 export default function Cards() {
@@ -42,9 +42,7 @@ export default function Cards() {
           description={movie.overview}
         />
       ))}
-      <button id="load-more" ref={buttonRef} onClick={loadMoreHandler}>
-        <span>Load More</span>
-      </button>
+      <LoadMoreButton ref={buttonRef} onClick={loadMoreHandler}><LoadMoreText>Load More</LoadMoreText></LoadMoreButton>
     </CardsWrapper>
   );
 }

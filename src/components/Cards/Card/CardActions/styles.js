@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardActionsWrapper = styled.div`
+const CardActionsWrapper = styled.div`
     ${({ $active }) => {
         return $active
           ? `
@@ -17,7 +17,7 @@ export const CardActionsWrapper = styled.div`
     }}
 `
 
-export const CardActionsList = styled.ul`
+const CardActionsList = styled.ul`
     width: 90%;
     background-color: white;
     list-style-type: none;
@@ -30,4 +30,7 @@ export const CardActionsList = styled.ul`
     border-radius: 5px;
     overflow: hidden;
 `
-
+export {
+    CardActionsList,
+    CardActionsWrapper,
+}

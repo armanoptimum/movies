@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardActionsItemWrapper = styled.li`
+const CardActionsItemWrapper = styled.li`
     padding: var(--padding-small-extra);
     border-bottom: 0.01rem solid var(--text-color-muted);
     display: flex;
@@ -20,10 +20,16 @@ export const CardActionsItemWrapper = styled.li`
   }
 `;
 
-export const CardActionsImg = styled.img`
+const CardActionsImg = styled.img`
     width: 13%;
 `
 
-export const CardActionsTitle = styled.span`
+const CardActionsTitle = styled.span`
     font-size: var(--font-size-small)
 `
+
+export {
+    CardActionsItemWrapper,
+    CardActionsImg,
+    CardActionsTitle,   
+}
