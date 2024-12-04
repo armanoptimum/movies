@@ -35,6 +35,7 @@ const Header = () => {
 
   return (
     <HeaderWrapper $sticky={isSticky}>
+        <BurgerMenu burgerActive={burgerToggle} />
       <HeaderNavWrapper>
         <HeaderNavItem logo source={logo} />
         <HeaderNavItem onClick={handleBurgerToggle} source={burgerIcon} />
@@ -44,7 +45,6 @@ const Header = () => {
         <HeaderNavItem dropdownItems={['Popular Show', 'Airing Today', 'On TV', 'Top Rated']}>TV Shows</HeaderNavItem>
         <HeaderNavItem dropdownItems={['Popular People']}>People</HeaderNavItem>
         <HeaderNavItem dropdownItems={['Discussion', 'LeaderBoard', 'Support', 'API']}>More</HeaderNavItem>
-        <BurgerMenu burgerActive={burgerToggle} />
       </HeaderNavWrapper>
 
       <HeaderNavWrapper>

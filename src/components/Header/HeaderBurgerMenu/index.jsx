@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import HeaderNavItem from '../HeaderNavItem';
-import BurgerMenuWrapper from './styles';
+import { BurgerMenuWrapper, BurgerNavItemWrapper,  OtherLinksItem, OtherLinksWrapper } from './styles';
+import { additionalLiks, navItems } from './data';
 
 export default function BurgerMenu({ burgerActive }) {
   const [activeDropdowns, setActiveDropdowns] = useState([]);
@@ -15,40 +16,27 @@ export default function BurgerMenu({ burgerActive }) {
     });
   };
   return (
-    <BurgerMenuWrapper $show={burgerActive ? 'show' : ''}>
-      <ul>
-        <HeaderNavItem
-          onClick={() => toggleDropdown(0)}
-          isActiveDropDown={activeDropdowns.includes(0)}
-          href="popular"
-          dropdownItems={['Popular', 'Now Playing', 'Upcoming', 'Top Rated']}
-        >
-          Movies
-        </HeaderNavItem>
-        <HeaderNavItem
-          onClick={() => toggleDropdown(1)}
-          isActiveDropDown={activeDropdowns.includes(1)}
-          dropdownItems={['Popular Show', 'Airing Today', 'On TV', 'Top Rated']}
-        >
-          TV Shows
-        </HeaderNavItem>
-        <HeaderNavItem
-          onClick={() => toggleDropdown(2)}
-          isActiveDropDown={activeDropdowns.includes(2)}
-          dropdownItems={['Popular People']}
-        >
-          People
-        </HeaderNavItem>
-      </ul>
-      <div className="other">
-        <p>Contribution Bible</p>
-        <p>Discussion</p>
-        <p>Leaderboard</p>
-        <p>API</p>
-        <p>Support</p>
-        <p>About</p>
-        <p>Logout</p>
-      </div>
+    <BurgerMenuWrapper $show={burgerActive}>
+      <BurgerNavItemWrapper>
+      {navItems.map((item, id) => (
+          <HeaderNavItem
+            key={id}
+            onClick={() => toggleDropdown(id)}
+            isActiveDropDown={activeDropdowns.includes(id)}
+            href={item.href}
+            dropdownItems={item.dropdownItems}
+          >
+            {item.name}
+          </HeaderNavItem>
+        ))}
+      </BurgerNavItemWrapper>
+      <OtherLinksWrapper>
+        {
+          additionalLiks.map((name, id) => (
+            <OtherLinksItem key={id}>{name}</OtherLinksItem>
+          ))
+        }
+      </OtherLinksWrapper>
     </BurgerMenuWrapper>
   );
 }

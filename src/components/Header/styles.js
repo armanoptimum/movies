@@ -13,6 +13,7 @@ export const HeaderWrapper = styled.header`
   transition: top 0.5s ease;
   position: sticky;
   top: ${({ $sticky }) => ($sticky ? '0' : '-100px')};
+  z-index: 100;
 
   @media (min-width: 1000px) {
     padding: var(--padding-small) var(--padding-large);
