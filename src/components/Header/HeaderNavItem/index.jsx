@@ -4,7 +4,11 @@ function HeaderNavItem({ children, href, dropdownItems, onClick, source, logo, i
   let logoElement;
 
   if (logo) {
-    logoElement = <NavLink to="/"><img id='logo' src={source} alt="Logo" /> </NavLink>;
+    logoElement = (
+      <NavLink to="/">
+        <img id="logo" src={source} alt="Logo" />{' '}
+      </NavLink>
+    );
   } else if (source) {
     logoElement = <img src={source} alt={children} />;
   } else {
@@ -21,9 +25,10 @@ function HeaderNavItem({ children, href, dropdownItems, onClick, source, logo, i
 
       {dropdownItems && (
         <ul className="dropdown">
-          {
-            dropdownItems.map((item, index) => (
-            <li key={index}><NavLink to={item === 'Popular' ? `${item.toLowerCase()}` : '#'}>{item}</NavLink> </li>
+          {dropdownItems.map((item, index) => (
+            <li key={index}>
+              <NavLink to={item === 'Popular' ? `${item.toLowerCase()}` : '#'}>{item}</NavLink>{' '}
+            </li>
           ))}
         </ul>
       )}

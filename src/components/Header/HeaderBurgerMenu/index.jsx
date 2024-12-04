@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import HeaderNavItem from '../HeaderNavItem';
-import { BurgerMenuWrapper, BurgerNavItemWrapper,  OtherLinksItem, OtherLinksWrapper } from './styles';
+import { BurgerMenuWrapper, BurgerNavItemWrapper, OtherLinksItem, OtherLinksWrapper } from './styles';
 import { additionalLiks, navItems } from './data';
 
 export default function BurgerMenu({ burgerActive }) {
@@ -18,7 +18,7 @@ export default function BurgerMenu({ burgerActive }) {
   return (
     <BurgerMenuWrapper $show={burgerActive}>
       <BurgerNavItemWrapper>
-      {navItems.map((item, id) => (
+        {navItems.map((item, id) => (
           <HeaderNavItem
             key={id}
             onClick={() => toggleDropdown(id)}
@@ -31,11 +31,9 @@ export default function BurgerMenu({ burgerActive }) {
         ))}
       </BurgerNavItemWrapper>
       <OtherLinksWrapper>
-        {
-          additionalLiks.map((name, id) => (
-            <OtherLinksItem key={id}>{name}</OtherLinksItem>
-          ))
-        }
+        {additionalLiks.map((name, id) => (
+          <OtherLinksItem key={id}>{name}</OtherLinksItem>
+        ))}
       </OtherLinksWrapper>
     </BurgerMenuWrapper>
   );

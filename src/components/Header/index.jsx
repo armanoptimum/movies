@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <HeaderWrapper $sticky={isSticky}>
-        <BurgerMenu burgerActive={burgerToggle} />
+      <BurgerMenu burgerActive={burgerToggle} />
       <HeaderNavWrapper>
         <HeaderNavItem logo source={logo} />
         <HeaderNavItem onClick={handleBurgerToggle} source={burgerIcon} />
