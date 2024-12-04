@@ -1,24 +1,17 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header/index.jsx';
 import Footer from '../components/Footer/index.jsx';
-import PopularMovies from '../components/PopularMovies/index.jsx';
-import Main from '../components/Main/index.jsx';
-import MovieProvider from '../components/PopularMovies/utils/moviePrivider.jsx';
+import { config } from './config.jsx';
+
 
 function AppRouter() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route
-          path="/popular"
-          element={
-            <MovieProvider>
-              <PopularMovies />
-            </MovieProvider>
-          }
-        />
+        {
+          config.map((route, index) => <Route key={index} path={route.path} element={route.element} />)
+        }
       </Routes>
       <Footer />
     </BrowserRouter>
