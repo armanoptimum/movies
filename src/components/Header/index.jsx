@@ -7,17 +7,34 @@ import burgerIcon from '../../assets/burger.svg';
 import logoMobile from '../../assets/logo2.svg';
 import HeaderNavItem from './HeaderNavItem';
 import BurgerMenu from './HeaderBurgerMenu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [burgerToggle, setBurgerToggle] = useState(false);
+  const [isSticky, setIsSticky] = useState(true)
 
   function handleBurgerToggle() {
     setBurgerToggle((prev) => !prev);
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 70) {
+        setIsSticky(false)
+      } else {
+        setIsSticky(true)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
-    <HeaderWrapper>
+    <HeaderWrapper $sticky={isSticky}>
       <BurgerMenu burgerActive={burgerToggle} />
       <HeaderNavWrapper>
         <HeaderNavItem logo source={logo} />
