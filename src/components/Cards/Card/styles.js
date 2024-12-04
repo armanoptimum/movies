@@ -13,32 +13,7 @@ const CardWrapper = styled.div`
   cursor: pointer;
   position: relative;
 
-  #dots {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 20px;
-    z-index: 11;
-  }
-
-  #dots:hover {
-    filter: brightness(0) saturate(100%) invert(45%) sepia(56%) saturate(700%) hue-rotate(176deg) brightness(95%)
-      contrast(105%);
-  }
-
-  .blur {
-    display: none;
-  }
-
-  .blur.active {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(20px);
-    z-index: 10;
-  }
-
+  
   & #description {
     width: 100%;
     margin-top: 1rem;
@@ -51,18 +26,6 @@ const CardWrapper = styled.div`
     font-size: var(--font-size-small);
   }
 
-  .blur ul {
-    width: 90%;
-    background-color: white;
-    list-style-type: none;
-    position: absolute;
-    top: 2rem;
-    right: 5%;
-    font-size: var(--font-size-small);
-    color: var(--text-color-muted);
-    text-align: center;
-    border-radius: 5px;
-  }
 
   & .info {
     position: relative;
@@ -116,5 +79,21 @@ const CardWrapper = styled.div`
     }
   }
 `;
+
+
+
+export const ThreeDots = styled.img`
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    z-index: 11;
+
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(56%) saturate(700%) hue-rotate(176deg) brightness(95%)
+    contrast(105%);
+`
+
+
 
 export default CardWrapper;

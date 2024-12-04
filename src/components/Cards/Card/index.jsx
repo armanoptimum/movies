@@ -1,26 +1,19 @@
-import CardWrapper from './styles';
-import threeDots from '../../../assets/three-dots.svg';
 import { useState } from 'react';
-import CardItem from './CardItem';
-import { itemData } from '../utils';
+import CardActions from './CardActions';
+import CardWrapper, { ThreeDots } from './styles';
+import threeDots from '../../../assets/three-dots.svg';
 
 export default function Card({ movieName, description, date, img, rating }) {
-  const [action, setAction] = useState(false);
+  const [active, setActive] = useState(false);
 
   const toggleBlure = () => {
-    setAction((prev) => !prev);
+    setActive((prev) => !prev);
   };
-
+  
   return (
     <CardWrapper>
-      <div className={action ? 'blur active' : 'blur'}>
-        <ul>
-          {itemData.map((item, index) => (
-            <CardItem key={index} img={item.img} name={item.name} />
-          ))}
-        </ul>
-      </div>
-      <img onClick={toggleBlure} id="dots" src={threeDots} alt="three dots" />
+      <CardActions active={active} />
+      <ThreeDots  onClick={toggleBlure} src={threeDots} alt="three dots"  />
       <img id="movieImg" src={img} alt="" />
       <div className="info">
         <div className="rating">
