@@ -26,9 +26,13 @@ const FooterNavItemButton = styled.button`
       padding: 0.7rem 1rem;
       border-radius: var(--border-radius);
       border: none;
-      margin-top: 6.3rem;
+      margin-top: 1rem;
       background-color: var(--text-color-light);
       cursor: pointer;
+         
+      @media (min-width: 1030px) {
+        margin-top: 6.3rem;  
+    }
 `
 
 export {
