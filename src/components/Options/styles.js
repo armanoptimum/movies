@@ -12,7 +12,7 @@ const OptionsWrapper = styled.div`
     border: none;
     border-radius: 50px;
     padding: var(--padding-small) var(--padding-medium);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-small-plus);
     color: var(--text-color-muted);
     font-weight: 600;
     cursor: pointer;
