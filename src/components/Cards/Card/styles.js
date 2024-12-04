@@ -18,6 +18,7 @@ const CardWrapper = styled.div`
     top: 5px;
     right: 5px;
     width: 20px;
+    z-index: 11;
   }
 
   #dots:hover {
@@ -26,7 +27,6 @@ const CardWrapper = styled.div`
   }
 
   .blur {
-    position: relative;
     display: none;
   }
 
@@ -36,7 +36,9 @@ const CardWrapper = styled.div`
     width: 100%;
     height: 100%;
     backdrop-filter: blur(20px);
+    z-index: 10;
   }
+
 
   & #description {
     width: 100%;
