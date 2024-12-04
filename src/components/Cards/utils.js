@@ -1,28 +1,4 @@
-import listImg from '../../../assets/list.svg';
-import favoriteImg from '../../../assets/favorite.svg';
-import bookmarkImg from '../../../assets/bookMark.svg';
-import starImg from '../../../assets/star.svg';
-
 const IMAGE_PREFIX = 'https://media.themoviedb.org/t/p/w440_and_h660_face';
-
-const itemData = [
-  {
-    img: listImg,
-    name: 'Add to list',
-  },
-  {
-    img: favoriteImg,
-    name: 'Favorites',
-  },
-  {
-    img: bookmarkImg,
-    name: 'Bookmark',
-  },
-  {
-    img: starImg,
-    name: 'Rating',
-  },
-];
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -66,4 +42,4 @@ const fetchData = async (page) => {
   }
 };
 
-export { IMAGE_PREFIX, formatDate, fetchData, itemData, calculateRating };
+export { IMAGE_PREFIX, formatDate, fetchData, calculateRating };
