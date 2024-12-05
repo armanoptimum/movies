@@ -19,11 +19,7 @@ const routeConfig = [
       {
         path: 'movies/popular', 
         element: <PopularMovies />,
-      },
-      {
-        path: 'tv-shows/tv-shows', 
-        element: <PopularMovies />,
-      },
+      }
     ],
   },
 ];
