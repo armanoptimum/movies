@@ -1,7 +1,7 @@
-import listImg from '../../assets/list.svg';
-import favoriteImg from '../../assets/favorite.svg';
-import bookmarkImg from '../../assets/bookMark.svg';
-import starImg from '../../assets/star.svg';
+import listImg from '@/assets/list.svg';
+import favoriteImg from '@/assets/favorite.svg';
+import bookmarkImg from '@/assets/bookMark.svg';
+import starImg from '@/assets/star.svg';
 
 export const itemData = [
   {

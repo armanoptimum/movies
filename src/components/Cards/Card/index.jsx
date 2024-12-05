@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CardActions from './CardActions';
 import { CardWrapper, MovieImg, ThreeDots } from './styles';
-import threeDots from '../../../assets/three-dots.svg';
+import threeDots from '@/assets/three-dots.svg';
 import MovieInfo from './MovieInfo';
 
 export default function Card({ movieName, description, date, img, rating }) {

@@ -1,24 +1,24 @@
 import styled from 'styled-components';
 
-const FooterNavItemWrapper = styled.li`
+export const FooterNavItemWrapper = styled.li`
   color: var(--text-color-light);
 `;
 
-const FooterNavItemLink = styled.a``;
+export const FooterNavItemLink = styled.a``;
 
-const FooterNavItemImg = styled.img`
+export const FooterNavItemImg = styled.img`
   display: none;
   width: 7rem;
 
-  @media (min-width: 1030px) {
+  @media (min-width: 64rem) {
     display: block;
     position: absolute;
-    top: -20px;
+    top: -1.25rem;
     left: 5.5rem;
   }
 `;
 
-const FooterNavItemButton = styled.button`
+export const FooterNavItemButton = styled.button`
   display: inline-block;
   font-size: var(--font-size-medium);
   font-weight: 600;
@@ -30,9 +30,7 @@ const FooterNavItemButton = styled.button`
   background-color: var(--text-color-light);
   cursor: pointer;
 
-  @media (min-width: 1030px) {
+  @media (min-width: 64rem) {
     margin-top: 6.3rem;
   }
 `;
-
-export { FooterNavItemWrapper, FooterNavItemLink, FooterNavItemImg, FooterNavItemButton };

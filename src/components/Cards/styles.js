@@ -1,29 +1,29 @@
 import styled from 'styled-components';
 
-const CardsWrapper = styled.div`
+export const CardsWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
   padding-left: 0;
   margin-top: 3rem;
   gap: 2rem;
   width: 100%;
 
-  @media (min-width: 890px) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 56rem) {
+    grid-template-columns: repeat(2, 1fr);
     padding-left: var(--padding-medium);
     margin-top: 0;
   }
 
-  @media (min-width: 1100px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media (min-width: 68rem) {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  @media (min-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 75rem) {
+    grid-template-columns: repeat(5, 1fr);
   }
 `;
 
-const LoadMoreButton = styled.button`
+export const LoadMoreButton = styled.button`
   grid-column: 1 / -1;
   padding: var(--padding-small);
   background-color: var(--secondary-color);
@@ -36,11 +36,9 @@ const LoadMoreButton = styled.button`
   transition: background-color var(--transition);
 `;
 
-const LoadMoreText = styled.span`
+export const LoadMoreText = styled.span`
   &:hover {
     cursor: pointer;
     color: var(--primary-color);
   }
 `;
-
-export { CardsWrapper, LoadMoreButton, LoadMoreText };

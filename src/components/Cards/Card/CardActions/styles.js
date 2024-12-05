@@ -1,23 +1,15 @@
 import styled from 'styled-components';
 
-const CardActionsWrapper = styled.div`
-  ${({ $active }) => {
-    return $active
-      ? `
-              position: absolute;
-              display: block;
-              width: 100%;
-              height: 100%;
-              backdrop-filter: blur(20px);
-              z-index: 10;
-          `
-      : `
-              display: none;
-          `;
-  }}
+export const CardActionsWrapper = styled.div`
+  position: absolute;
+  display: ${({ $active }) => ($active ? 'display' : 'none')};
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  z-index: 10;
 `;
 
-const CardActionsList = styled.ul`
+export const CardActionsList = styled.ul`
   width: 90%;
   background-color: white;
   list-style-type: none;
@@ -27,7 +19,6 @@ const CardActionsList = styled.ul`
   font-size: var(--font-size-small);
   color: var(--text-color-muted);
   text-align: center;
-  border-radius: 5px;
+  border-radius: 0.4rem;
   overflow: hidden;
 `;
-export { CardActionsList, CardActionsWrapper };

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from '../components/Header/index.jsx';
-import Footer from '../components/Footer/index.jsx';
+import Header from '@/components/Header/index.jsx';
+import Footer from '@/components/Footer/index.jsx';
 import routeConfig from './config.jsx';
 
 function AppRouter() {

@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
-const MovieInfoWrapper = styled.div`
+export const MovieInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
   padding: var(--padding-medium);
 `;
 
-const MovieRatingWrapper = styled.div`
+export const MovieRatingWrapper = styled.div`
   position: absolute;
-  top: -15px;
-  left: 5px;
+  top: -1rem;
+  left: 0.3rem;
   background-color: #081c22;
   border-radius: 100%;
   width: 2rem;
@@ -19,25 +19,25 @@ const MovieRatingWrapper = styled.div`
   color: var(--text-color-light);
   text-align: center;
   font-weight: bold;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   align-items: center;
-  border: 2px solid #21d07a;
+  border: 0.1rem solid #21d07a;
 
-  @media (min-width: 890px) {
+  @media (min-width: 55rem) {
     display: flex;
   }
 `;
 
-const MovieName = styled.h2`
+export const MovieName = styled.h2`
   font-weight: 700;
   color: var(--text-color-dark);
 `;
 
-const MovieDate = styled.p`
+export const MovieDate = styled.p`
   color: var(--text-color-muted);
 `;
 
-const MovieDescription = styled.h2`
+export const MovieDescription = styled.h2`
   width: 100%;
   margin-top: 1rem;
   display: none;
@@ -48,16 +48,14 @@ const MovieDescription = styled.h2`
   color: var(--text-color-dark);
   font-size: var(--font-size-small);
 
-  @media (max-width: 890px) {
+  @media (max-width: 55rem) {
     display: -webkit-box;
   }
 `;
 
-const PerCentIcon = styled.span`
+export const PerCentIcon = styled.span`
   position: absolute;
-  font-size: 5px;
-  top: 4px;
-  right: 6px;
+  font-size: 0.3rem;
+  top: 0.2rem;
+  right: 0.4rem;
 `;
-
-export { MovieInfoWrapper, MovieRatingWrapper, PerCentIcon, MovieName, MovieDate, MovieDescription };

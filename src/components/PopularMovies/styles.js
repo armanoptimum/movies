@@ -1,27 +1,26 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.main`
+export const Wrapper = styled.main`
   padding: var(--padding-medium);
   background-color: #fff;
+  margin: auto;
 
-  @media (min-width: 890px) {
+  @media (min-width: 56rem) {
     padding: var(--padding-medium) var(--padding-large);
   }
 `;
 
-const Title = styled.h2`
+export const Title = styled.h2`
   font-size: var(--font-size-large);
   padding: var(--padding-small) 0;
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
 
-  @media (min-width: 890px) {
+  @media (min-width: 56rem) {
     flex-direction: row;
   }
 `;
-
-export { Wrapper, Title, Content };

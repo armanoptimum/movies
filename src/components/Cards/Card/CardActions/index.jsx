@@ -1,4 +1,4 @@
-import { itemData } from '../../data';
+import { itemData } from '@/components/Cards/data';
 import CardItem from './CardActionsItem';
 import { CardActionsList, CardActionsWrapper } from './styles';
 

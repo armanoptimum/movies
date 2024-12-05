@@ -6,8 +6,7 @@ function FooterNavItem({ children, header, button, img, goTo, ...props }) {
   if (img) {
     content = (
       <FooterNavItemLink href="/">
-        {' '}
-        <FooterNavItemImg src={img} alt={children} />{' '}
+        <FooterNavItemImg src={img} alt={children} />
       </FooterNavItemLink>
     );
   } else if (button) {

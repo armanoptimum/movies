@@ -1,10 +1,10 @@
 import { useContext, useEffect } from 'react';
-import Cards from '../Cards';
-import Options from '../Options';
+import Cards from '@/components/Cards';
+import Options from '@/components/Options';
 import { Wrapper, Title, Content } from './styles';
 import { MovieContex } from './moviePrivider';
-import { fetchData } from '../Cards/utils';
-import { sortMovies } from '../Options/Option/data';
+import { fetchData } from '@/components/Cards/utils';
+import { sortMovies } from '@/components/Options/Option/data';
 
 export default function PopularMovies() {
   const { activeSortOption, page, movies, setMovies } = useContext(MovieContex);

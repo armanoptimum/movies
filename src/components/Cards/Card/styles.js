@@ -6,33 +6,35 @@ export const CardWrapper = styled.div`
   box-shadow: var(--box-shadow);
   background-color: var(--text-color-light);
   border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
+  border: 0.06rem solid var(--border-color);
   overflow: hidden;
   font-size: var(--font-size-extra-small);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
 
-  @media (max-width: 890px) {
+  @media (max-width: 56rem) {
     flex-direction: row;
     height: 10rem;
   }
 `;
-export const ThreeDots = styled.img`
-    position: absolute;
-    display: none;
-    top: 5px;
-    right: 5px;
-    width: 20px;
-    z-index: 11;
 
-     @media (min-width: 890px) {
-      display: block;
-    }
+export const ThreeDots = styled.img`
+  position: absolute;
+  display: none;
+  top: 0.3rem;
+  right: 0.3rem;
+  width: 1.25rem;
+  z-index: 11;
 
   &:hover {
     filter: brightness(0) saturate(100%) invert(45%) sepia(56%) saturate(700%) hue-rotate(176deg) brightness(95%)
-    contrast(105%);
+      contrast(105%);
+  }
+
+  @media (min-width: 56rem) {
+    display: block;
+  }
 `;
 
 export const MovieImg = styled.img``;

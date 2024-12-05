@@ -12,10 +12,10 @@ export const HeaderWrapper = styled.header`
   white-space: nowrap;
   transition: top 0.5s ease;
   position: sticky;
-  top: ${({ $sticky }) => ($sticky ? '0' : '-100px')};
+  top: ${({ $sticky }) => ($sticky ? '0' : '-6.25rem')};
   z-index: 100;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 62rem) {
     padding: var(--padding-small) var(--padding-large);
   }
 `;
@@ -28,8 +28,8 @@ export const HeaderNavWrapper = styled.ul`
   gap: 1.3rem;
 
   &:nth-of-type(3) li:nth-child(2) a {
-    border: 1px solid #fff;
-    border-radius: 3px;
+    border: 0.07rem solid #fff;
+    border-radius: 0.2rem;
     padding: 0.1rem 0.2rem;
   }
 
@@ -48,7 +48,7 @@ export const HeaderNavWrapper = styled.ul`
     display: none;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 62.5rem) {
     display: flex;
     &:nth-of-type(1) li:nth-child(1),
     &:nth-of-type(1) li:nth-child(3),

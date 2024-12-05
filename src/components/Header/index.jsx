@@ -1,8 +1,7 @@
 import { HeaderWrapper, HeaderNavWrapper } from './styles';
-
-import logo from '../../assets/logo.svg';
-import burgerIcon from '../../assets/burger.svg';
-import logoMobile from '../../assets/logo2.svg';
+import logo from '@/assets/logo.svg';
+import burgerIcon from '@/assets/burger.svg';
+import logoMobile from '@/assets/logo2.svg';
 import HeaderNavItem from './HeaderNavItem';
 import BurgerMenu from './HeaderBurgerMenu';
 import { useEffect, useState } from 'react';

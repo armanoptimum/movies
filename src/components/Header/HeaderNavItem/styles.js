@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const HeaderDropDownWrapper = styled.ul`
+export const HeaderDropDownWrapper = styled.ul`
   display: none;
   gap: 1rem;
-  width: 150px;
+  width: 9.3rem;
   position: absolute;
   top: 100%;
   left: 0;
@@ -11,8 +11,8 @@ const HeaderDropDownWrapper = styled.ul`
   background-color: #fff;
   padding: 0.5rem 0;
   list-style-type: none;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 7px;
+  box-shadow: 0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
   font-size: var(--font-size-small);
   z-index: 1;
 
@@ -22,13 +22,13 @@ const HeaderDropDownWrapper = styled.ul`
   }
 `;
 
-const HeaderDropDownItem = styled.li`
+export const HeaderDropDownItem = styled.li`
   &:hover {
     background-color: #ebebeb;
   }
 `;
 
-const HeaderNavItemWrapper = styled.li`
+export const HeaderNavItemWrapper = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,10 +41,8 @@ const HeaderNavItemWrapper = styled.li`
   }
 `;
 
-const HeaderNavItemLogo = styled.img`
+export const HeaderNavItemLogo = styled.img`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
-
-export { HeaderNavItemWrapper, HeaderDropDownWrapper, HeaderDropDownItem, HeaderNavItemLogo };

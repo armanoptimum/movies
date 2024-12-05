@@ -1,5 +1,5 @@
-import { Wrapper, Header, Name, Drop, Divider, Action, List, Current, ListOptions, OptionItem } from './styles';
-import arrowRight from '../../../assets/arrow-right.svg';
+import { Wrapper, Header, Name, Drop, Divider, Action, List, Current, ListOptions, OptionItem, OptionName } from './styles';
+import arrowRight from '@/assets/arrow-right.svg';
 import { useState } from 'react';
 import options from './data';
 
@@ -29,7 +29,7 @@ export default function Option({ children, activeSortOption, setActiveSortOption
       </Header>
       <Divider $active={isOpenHeader} />
       <Action $active={isOpenHeader}>
-        <h5>{children} Results By</h5>
+        <OptionName>{children} Results By</OptionName>
         <List onClick={openListHandler}>
           <Current>
             <p>{activeSortOption}</p>

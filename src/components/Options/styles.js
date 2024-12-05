@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 9rem;
   gap: 2rem;
 
-  @media (min-width: 460px) {
+  @media (min-width: 28.5rem) {
     min-width: 16rem;
   }
 `;
 
-const SearchButton = styled.button`
+export const SearchButton = styled.button`
   display: block;
   width: 100%;
   border: none;
-  border-radius: 50px;
+  border-radius: 3rem;
   padding: var(--padding-small) var(--padding-medium);
   font-size: var(--font-size-small-plus);
   font-weight: 600;
@@ -28,5 +28,3 @@ const SearchButton = styled.button`
     background-color: ${({ $active }) => ($active ? 'var(--primary-color)' : 'var(--text-color-muted-light)')};
   }
 `;
-
-export { Wrapper, SearchButton };
