@@ -4,7 +4,7 @@ import addIcon from '../../assets/add.svg';
 
 export const itemsWithDropDown = [
   {
-    href: 'popular',
+    href: '/popular',
     label: 'Movies',
     dropdownItems: ['Popular', 'Now Playing', 'Upcoming', 'Top Rated'],
   },

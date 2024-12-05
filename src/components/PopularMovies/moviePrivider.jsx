@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useState } from 'react';
-import options from '../../Options/Option/data';
+import options from '../Options/Option/data';
 
 export const MovieContex = createContext();
 

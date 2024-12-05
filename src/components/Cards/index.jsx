@@ -1,8 +1,9 @@
 import { useContext, useEffect, useRef } from 'react';
-import { IMAGE_PREFIX, formatDate, calculateRating } from './utils.js';
+import { formatDate, calculateRating } from './utils.js';
 import Card from './Card';
 import { CardsWrapper, LoadMoreButton, LoadMoreText } from './styles';
-import { MovieContex } from '../PopularMovies/utils/moviePrivider';
+import { MovieContex } from '../PopularMovies/moviePrivider.jsx';
+import { IMAGE_PREFIX } from '../../shared/constants.js';
 
 export default function Cards() {
   const { page, setPage, movies } = useContext(MovieContex);

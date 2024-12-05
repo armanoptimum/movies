@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import Cards from '../Cards';
 import Options from '../Options';
 import { Wrapper, Title, Content } from './styles';
-import { MovieContex } from './utils/moviePrivider';
+import { MovieContex } from './moviePrivider';
 import { fetchData } from '../Cards/utils';
 import { sortMovies } from '../Options/Option/data';
 

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import Option from './Option';
 import { Wrapper, SearchButton } from './styles';
-import { MovieContex } from '../PopularMovies/utils/moviePrivider';
+import { MovieContex } from '../PopularMovies/moviePrivider';
 
 export default function Options({ onSearchHandler }) {
   const { activeSortOption, setActiveSortOption } = useContext(MovieContex);

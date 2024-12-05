@@ -1,4 +1,3 @@
-const IMAGE_PREFIX = 'https://media.themoviedb.org/t/p/w440_and_h660_face';
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -15,9 +14,7 @@ const formatDate = (dateString) => {
   }
 };
 
-const calculateRating = (data) => {
-  return Math.ceil(data * 10);
-};
+const calculateRating = (data) => Math.ceil(data * 10);
 
 const fetchData = async (page) => {
   const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`;
@@ -26,7 +23,7 @@ const fetchData = async (page) => {
     headers: {
       accept: 'application/json',
       Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMDk0NzczZTA3YzU1NDQzZDlkMGM0MGU5ZGJmOTM4OSIsIm5iZiI6MTczMjg4NzgzMC43NTg2NTU4LCJzdWIiOiI2NzQ5YzMyNTRhNDg0MTdiODQxNzgzMjEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.goSe6sug0KY0VrgSURm8IM2Gfb30d_sZJWjssktm00g',
+        `Bearer ${import.meta.env.VITE_APP_AUTORIZATION}`,
     },
   };
   try {
@@ -42,4 +39,4 @@ const fetchData = async (page) => {
   }
 };
 
-export { IMAGE_PREFIX, formatDate, fetchData, calculateRating };
+export { formatDate, fetchData, calculateRating };

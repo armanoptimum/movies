@@ -1,9 +1,9 @@
-import { MainWrapper } from './styles';
+import { MainWrapper, Title } from './styles';
 
 export default function Main() {
   return (
     <MainWrapper>
-      <h1>Hover over the movies, then click on the popular</h1>
+      <Title>Hover over the movies, then click on the popular</Title>
     </MainWrapper>
   );
 }

@@ -1,8 +1,8 @@
 import Main from '../components/Main';
 import PopularMovies from '../components/PopularMovies';
-import MovieProvider from '../components/PopularMovies/utils/moviePrivider';
+import MovieProvider from '../components/PopularMovies/moviePrivider';
 
-export const config = [
+ const routeConfig = [
   {
     path: '/',
     element: <Main />,
@@ -16,3 +16,5 @@ export const config = [
     ),
   },
 ];
+
+export default routeConfig;
