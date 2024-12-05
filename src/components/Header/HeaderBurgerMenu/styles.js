@@ -15,7 +15,6 @@ const BurgerMenuWrapper = styled.div`
 const BurgerMenuDropDownWrapper = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   font-size: var(--font-size-extra-small);
   margin-bottom: 1rem;
 `;
@@ -29,6 +28,6 @@ const OtherLinksWrapper = styled.ul`
 const OtherLinksItem = styled.li`
   list-style-type: none;
   list-style-type: none;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 `;
 export { BurgerMenuWrapper, OtherLinksWrapper, OtherLinksItem, BurgerMenuDropDownWrapper };

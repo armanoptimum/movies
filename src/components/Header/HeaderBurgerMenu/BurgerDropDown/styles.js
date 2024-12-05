@@ -3,11 +3,12 @@ import styled from 'styled-components';
 const BurgerDropDownWrapper = styled.li`
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 `;
 
 const BurgerDropDownName = styled.h3`
   font-size: var(--font-size-medium);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 `;
 
 const BurgerDropDownLinkWrapper = styled.div`
