@@ -1,4 +1,3 @@
-
 const formatDate = (dateString) => {
   const date = new Date(dateString);
   try {
@@ -22,8 +21,7 @@ const fetchData = async (page) => {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization:
-        `Bearer ${import.meta.env.VITE_APP_AUTORIZATION}`,
+      Authorization: `Bearer ${import.meta.env.VITE_APP_AUTORIZATION}`,
     },
   };
   try {

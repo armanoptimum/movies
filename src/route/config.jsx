@@ -2,7 +2,7 @@ import Main from '../components/Main';
 import PopularMovies from '../components/PopularMovies';
 import MovieProvider from '../components/PopularMovies/moviePrivider';
 
- const routeConfig = [
+const routeConfig = [
   {
     path: '/',
     element: <Main />,
