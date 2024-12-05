@@ -1,10 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useState } from 'react';
-import options from '../Options/Option/data';
+import options from '@/components/Options/Option/data';
 
-export const MovieContex = createContext();
+export const MediaContex = createContext();
 
-export default function MovieProvider({ children }) {
+export default function MediaProvider({ children }) {
   const [activeSortOption, setActiveSortOption] = useState(options[0]);
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState([]);
@@ -17,5 +17,5 @@ export default function MovieProvider({ children }) {
     movies,
     setMovies,
   };
-  return <MovieContex.Provider value={contexValue}>{children}</MovieContex.Provider>;
+  return <MediaContex.Provider value={contexValue}>{children}</MediaContex.Provider>;
 }

@@ -32,6 +32,7 @@ export default [
       'no-unused-vars': ['warn', { vars: 'all', varsIgnorePattern: '^_', argsIgnorePattern: '^_' }],
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'react/prop-types': 'off',
+      'react-hooks/exhaustive-deps': 'off',
     },
   },
 ];

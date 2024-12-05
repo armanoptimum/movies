@@ -2,10 +2,12 @@ import { useContext, useEffect, useRef } from 'react';
 import { formatDate, calculateRating } from './utils.js';
 import Card from './Card';
 import { CardsWrapper, LoadMoreButton, LoadMoreText } from './styles';
-import { MovieContex } from '@/components/PopularMovies/moviePrivider.jsx';
+import { MediaContex } from '../Media/moviePrivider.jsx';
+
+
 
 export default function Cards() {
-  const { page, setPage, movies } = useContext(MovieContex);
+  const { page, setPage, movies } = useContext(MediaContex);
   const buttonRef = useRef();
 
   useEffect(() => {
@@ -23,7 +25,6 @@ export default function Cards() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movies]);
 
   const loadMoreHandler = () => {

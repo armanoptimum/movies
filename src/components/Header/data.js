@@ -4,24 +4,41 @@ import addIcon from '../../assets/add.svg';
 
 export const itemsWithDropDown = [
   {
-    href: '/popular',
+    href: 'media/movies',
     label: 'Movies',
-    dropdownItems: ['Popular', 'Now Playing', 'Upcoming', 'Top Rated'],
+    dropdownItems: [
+      { name: 'Popular', href: 'popular' },
+      { name: 'Now Playing', href: 'now-playing' },
+      { name: 'Upcoming', href: 'upcoming' },
+      { name: 'Top Rated', href: 'top-rated' },
+    ],
   },
   {
-    href: '#',
+    href: 'media/tv-shows',
     label: 'TV Shows',
-    dropdownItems: ['Popular Show', 'Airing Today', 'On TV', 'Top Rated'],
+    dropdownItems: [
+      { name: 'Popular Show', href: 'popular' },
+      { name: 'Airing Today', href: 'airing-today' },
+      { name: 'On TV', href: 'on-tv' },
+      { name: 'Top Rated', href: 'top-rated' },
+    ],
   },
   {
-    href: '#',
+    href: 'people',
     label: 'People',
-    dropdownItems: ['Popular People'],
+    dropdownItems: [
+      { name: 'Popular People', href: 'popular' },
+    ],
   },
   {
-    href: '#',
+    href: 'more',
     label: 'More',
-    dropdownItems: ['Discussion', 'LeaderBoard', 'Support', 'API'],
+    dropdownItems: [
+      { name: 'Discussion', href: 'discussion' },
+      { name: 'LeaderBoard', href: 'leaderboard' },
+      { name: 'Support', href: 'support' },
+      { name: 'API', href: 'api' },
+    ],
   },
 ];
 
