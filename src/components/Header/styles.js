@@ -19,10 +19,6 @@ export const HeaderWrapper = styled.header`
     padding: var(--padding-small) var(--padding-large);
   }
 
-  .sticky {
-    position: sticky;
-  }
-
   #logo {
     display: flex;
     align-items: center;
@@ -100,7 +96,6 @@ export const HeaderNavWrapper = styled.ul`
 
   @media (min-width: 1000px) {
     display: flex;
-
     &:nth-of-type(1) li:nth-child(1),
     &:nth-of-type(1) li:nth-child(3),
     &:nth-of-type(1) li:nth-child(4),
