@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import HeaderNavItem from '../HeaderNavItem';
-import { BurgerMenuWrapper, BurgerNavItemWrapper, OtherLinksItem, OtherLinksWrapper } from './styles';
-import { additionalLiks, navItems } from './data';
+import { BurgerMenuDropDownWrapper, BurgerMenuWrapper, OtherLinksItem, OtherLinksWrapper } from './styles';
+import { additionalLiks, navItemsWithDropDown } from './data';
+import BurgerDropDown from './BurgerDropDown';
 
 export default function BurgerMenu({ burgerActive }) {
   const [activeDropdowns, setActiveDropdowns] = useState([]);
@@ -17,19 +17,20 @@ export default function BurgerMenu({ burgerActive }) {
   };
   return (
     <BurgerMenuWrapper $show={burgerActive}>
-      <BurgerNavItemWrapper>
-        {navItems.map((item, id) => (
-          <HeaderNavItem
-            key={id}
-            onClick={() => toggleDropdown(id)}
+      <BurgerMenuDropDownWrapper>
+        {navItemsWithDropDown.map((item, id) => (
+          <BurgerDropDown
             isActiveDropDown={activeDropdowns.includes(id)}
+            handleToggleDropdown={() => toggleDropdown(id)}
             href={item.href}
-            dropdownItems={item.dropdownItems}
+            key={id}
+            dropDownItems={item.dropdownItems}
           >
             {item.name}
-          </HeaderNavItem>
+          </BurgerDropDown>
         ))}
-      </BurgerNavItemWrapper>
+      </BurgerMenuDropDownWrapper>
+
       <OtherLinksWrapper>
         {additionalLiks.map((name, id) => (
           <OtherLinksItem key={id}>{name}</OtherLinksItem>

@@ -1,0 +1,50 @@
+import styled from 'styled-components';
+
+const HeaderDropDownWrapper = styled.ul`
+  display: none;
+  gap: 1rem;
+  width: 150px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-weight: 300;
+  background-color: #fff;
+  padding: 0.5rem 0;
+  list-style-type: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  font-size: var(--font-size-small);
+  z-index: 1;
+
+  & a {
+    color: #575353;
+    padding: 0.2rem 0.5rem;
+  }
+`;
+
+const HeaderDropDownItem = styled.li`
+  &:hover {
+    background-color: #ebebeb;
+  }
+`;
+
+const HeaderNavItemWrapper = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+
+  &:hover ${HeaderDropDownWrapper} {
+    display: block;
+  }
+`;
+
+const HeaderNavItemLogo = styled.img`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export { HeaderNavItemWrapper, HeaderDropDownWrapper, HeaderDropDownItem, HeaderNavItemLogo };

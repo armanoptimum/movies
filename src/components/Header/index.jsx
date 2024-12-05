@@ -38,17 +38,25 @@ const Header = () => {
       <HeaderNavWrapper>
         <HeaderNavItem logo source={logo} />
         <HeaderNavItem onClick={handleBurgerToggle} source={burgerIcon} />
-        {itemsWithDropDown.map((item, id) => <HeaderNavItem key={id} href={item.href} dropdownItems={item.dropdownItems}>{item.label}</HeaderNavItem>)}
+        {itemsWithDropDown.map((item, id) => (
+          <HeaderNavItem key={id} href={item.href} dropdownItems={item.dropdownItems}>
+            {item.label}
+          </HeaderNavItem>
+        ))}
       </HeaderNavWrapper>
- 
+
       <HeaderNavWrapper>
         <HeaderNavItem logo source={logoMobile} />
       </HeaderNavWrapper>
 
       <HeaderNavWrapper>
-        {itemActions.map((item, id) => <HeaderNavItem key={id} source={item.source}>{item.label}</HeaderNavItem>)}
+        {itemActions.map((item, id) => (
+          <HeaderNavItem key={id} source={item.source}>
+            {item.label}
+          </HeaderNavItem>
+        ))}
       </HeaderNavWrapper>
-      </HeaderWrapper>
+    </HeaderWrapper>
   );
 };
 
