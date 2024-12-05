@@ -21,13 +21,17 @@ const BurgerMenuDropDownWrapper = styled.ul`
 
 const OtherLinksWrapper = styled.ul`
   list-style-type: none;
-  color: var(--text-color-muted-light);
-  font-weight: 300;
+  color: var(--text-color-muted-medium);
+
+  & li:last-child {
+    margin-top: 1rem;
+  }
 `;
 
 const OtherLinksItem = styled.li`
   list-style-type: none;
   list-style-type: none;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 `;
 export { BurgerMenuWrapper, OtherLinksWrapper, OtherLinksItem, BurgerMenuDropDownWrapper };
