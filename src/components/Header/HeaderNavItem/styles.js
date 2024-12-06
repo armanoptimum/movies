@@ -24,7 +24,7 @@ export const HeaderDropDownWrapper = styled.ul`
 
 export const HeaderDropDownItem = styled.li`
   &:hover {
-    background-color: #ebebeb;
+    background-color: var(--text-color-muted-light);
   }
 `;
 
