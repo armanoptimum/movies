@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef } from 'react';
 import { formatDate, calculateRating } from './utils.js';
 import Card from './Card';
 import { CardsWrapper, LoadMoreButton, LoadMoreText } from './styles';
-import { MediaContex } from '../Media/moviePrivider.jsx';
+import { MediaContex } from '@/components/Media/moviePrivider.jsx';
 const { VITE_APP_IMAGE_PREFIX } = import.meta.env;
 
 export default function Cards() {
