@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   cursor: pointer;
   font-size: var(--font-size-extra-small);
   border-radius: 0.6rem;
-  border: 0.06rem solid var(--border-color);
+  border: 0.1rem solid var(--border-color);
   box-shadow: var(----box-shadow);
 `;
 
@@ -25,6 +25,7 @@ export const Name = styled.h2`
 `;
 
 export const Drop = styled.span`
+    
   display: flex;
   align-items: center;
   transform: ${({ $active }) => ($active ? 'rotate(90deg)' : 'none')};
