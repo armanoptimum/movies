@@ -17,9 +17,9 @@ const routeConfig = [
     ),
     children: [
       {
-        path: 'movies/popular', 
+        path: 'movies/popular',
         element: <PopularMovies />,
-      }
+      },
     ],
   },
 ];

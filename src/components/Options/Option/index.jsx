@@ -1,4 +1,16 @@
-import { Wrapper, Header, Name, Drop, Divider, Action, List, Current, ListOptions, OptionItem, OptionName } from './styles';
+import {
+  Wrapper,
+  Header,
+  Name,
+  Drop,
+  Divider,
+  Action,
+  List,
+  Current,
+  ListOptions,
+  OptionItem,
+  OptionName,
+} from './styles';
 import arrowRight from '@/assets/arrow-right.svg';
 import { useState } from 'react';
 import options from './data';

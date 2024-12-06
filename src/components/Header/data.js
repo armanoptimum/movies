@@ -26,9 +26,7 @@ export const itemsWithDropDown = [
   {
     href: 'people',
     label: 'People',
-    dropdownItems: [
-      { name: 'Popular People', href: 'popular' },
-    ],
+    dropdownItems: [{ name: 'Popular People', href: 'popular' }],
   },
   {
     href: 'more',

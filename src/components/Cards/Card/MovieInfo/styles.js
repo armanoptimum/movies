@@ -41,7 +41,7 @@ export const MovieDescription = styled.h2`
   width: 100%;
   margin-top: 1rem;
   display: none;
-  -webkit-line-clamp: 2; /* Number of lines to show */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

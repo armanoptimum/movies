@@ -1,22 +1,11 @@
-import { FooterNavItemButton, FooterNavItemImg, FooterNavItemLink, FooterNavItemWrapper } from './styles';
+import { FooterNavItemLink, FooterNavItemWrapper } from './styles';
 
-function FooterNavItem({ children, header, button, img, goTo, ...props }) {
-  let content;
-
-  if (img) {
-    content = (
-      <FooterNavItemLink href="/">
-        <FooterNavItemImg src={img} alt={children} />
-      </FooterNavItemLink>
-    );
-  } else if (button) {
-    content = <FooterNavItemButton>{children}</FooterNavItemButton>;
-  } else if (header) {
-    content = <h3>{children}</h3>;
-  } else {
-    content = <FooterNavItemLink href={goTo}>{children}</FooterNavItemLink>;
-  }
-  return <FooterNavItemWrapper {...props}>{content}</FooterNavItemWrapper>;
+function FooterNavItem({ children, goTo, header, ...props }) {
+  return (
+    <FooterNavItemWrapper $isHeader={header} {...props}>
+      <FooterNavItemLink href={goTo}>{children}</FooterNavItemLink>
+    </FooterNavItemWrapper>
+  );
 }
 
 export default FooterNavItem;

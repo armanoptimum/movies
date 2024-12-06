@@ -23,7 +23,7 @@ function HeaderNavItem({ children, href, dropdownItems, onClick, source, logo, .
         <HeaderDropDownWrapper>
           {dropdownItems.map((item, index) => (
             <HeaderDropDownItem key={index}>
-              <NavLink  to={href + "/" + item.href}>{item.name}</NavLink>
+              <NavLink to={href + '/' + item.href}>{item.name}</NavLink>
             </HeaderDropDownItem>
           ))}
         </HeaderDropDownWrapper>

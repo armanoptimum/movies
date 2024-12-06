@@ -1,13 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from '@/components/Header'; 
-import Footer from '@/components/Footer'; 
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import routeConfig from './config';
-
 
 function AppRouter() {
   return (
     <BrowserRouter>
-      <Header /> 
+      <Header />
       <Routes>
         {routeConfig.map((route, index) => (
           <Route key={index} path={route.path} element={route.element}>

@@ -3,13 +3,21 @@ import FooterNav from './FooterNav';
 import FooterNavItem from './FooterNavItem';
 import { FooterWrapper } from './styles';
 import footerData from './data';
+import { FooterNavItemButton, FooterNavItemImg, FooterNavItemLink, FooterNavItemWrapper } from './FooterNavItem/styles';
 
 export default function Footer() {
   return (
     <FooterWrapper>
       <FooterNav>
-        <FooterNavItem img={logo}>Logo</FooterNavItem>
-        <FooterNavItem button>Join The Comunity</FooterNavItem>
+        <FooterNavItemWrapper>
+          <FooterNavItemLink href="/">
+            <FooterNavItemImg src={logo} alt={'logo'} />
+          </FooterNavItemLink>
+        </FooterNavItemWrapper>
+
+        <FooterNavItemWrapper>
+          <FooterNavItemButton>Join The Comunity</FooterNavItemButton>
+        </FooterNavItemWrapper>
       </FooterNav>
 
       {footerData.map((section, index) => (

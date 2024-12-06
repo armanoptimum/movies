@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 export const FooterNavItemWrapper = styled.li`
+  ${({ $isHeader }) =>
+    $isHeader
+      ? `font-size: var(--font-size-large); 
+      font-weight: bold;`
+      : ''};
   color: var(--text-color-light);
 `;
 
