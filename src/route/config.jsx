@@ -1,7 +1,7 @@
 import Main from '@/components/Main';
-import PopularMovies from '@/components/Media/PopularMovies';
 import MediaProvider from '../components/Media/moviePrivider';
 import MediaLayout from '../components/Media';
+import MovieCategory from '../components/Media/MovieCategory';
 
 const routeConfig = [
   {
@@ -17,8 +17,8 @@ const routeConfig = [
     ),
     children: [
       {
-        path: 'movies/popular',
-        element: <PopularMovies />,
+        path: 'movies/:category',
+        element: <MovieCategory />,
       },
     ],
   },
