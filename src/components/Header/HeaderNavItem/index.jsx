@@ -1,16 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { HeaderDropDownItem, HeaderDropDownWrapper, HeaderNavItemLogo, HeaderNavItemWrapper } from './styles';
 
-function HeaderNavItem({ children, href, dropdownItems, onClick, source, logo, ...props }) {
+function HeaderNavItem({ children, href, dropdownItems, onClick, source, ...props }) {
   let logoElement;
 
-  if (logo) {
-    logoElement = (
-      <NavLink to="/">
-        <HeaderNavItemLogo src={source} alt="Logo" />
-      </NavLink>
-    );
-  } else if (source) {
+  if (source) {
     logoElement = <HeaderNavItemLogo src={source} alt={children} />;
   } else {
     logoElement = <NavLink to={href}>{children}</NavLink>;

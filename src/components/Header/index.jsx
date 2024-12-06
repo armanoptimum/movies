@@ -6,6 +6,8 @@ import HeaderNavItem from './HeaderNavItem';
 import BurgerMenu from './HeaderBurgerMenu';
 import { useEffect, useState } from 'react';
 import { itemActions, itemsWithDropDown } from './data';
+import { HeaderNavItemLogo, HeaderNavItemWrapper } from './HeaderNavItem/styles';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [burgerToggle, setBurgerToggle] = useState(false);
@@ -34,9 +36,19 @@ const Header = () => {
   return (
     <HeaderWrapper $sticky={isSticky}>
       <BurgerMenu burgerActive={burgerToggle} />
+
       <HeaderNavWrapper>
-        <HeaderNavItem logo source={logo} />
-        <HeaderNavItem onClick={handleBurgerToggle} source={burgerIcon} />
+        
+      <HeaderNavItemWrapper>
+        <NavLink to="/">
+            <HeaderNavItemLogo src={logo} alt="Logo" />
+          </NavLink>
+      </HeaderNavItemWrapper>
+
+      <HeaderNavItemWrapper>
+        <HeaderNavItemLogo onClick={handleBurgerToggle} src={burgerIcon} alt={'burger'} />
+      </HeaderNavItemWrapper>
+        
         {itemsWithDropDown.map((item, id) => (
           <HeaderNavItem key={id} href={item.href} dropdownItems={item.dropdownItems}>
             {item.label}
@@ -44,9 +56,11 @@ const Header = () => {
         ))}
       </HeaderNavWrapper>
 
+
       <HeaderNavWrapper>
-        <HeaderNavItem logo source={logoMobile} />
+        <HeaderNavItemWrapper><HeaderNavItemLogo src={logoMobile} alt="Mobile logo" /></HeaderNavItemWrapper>
       </HeaderNavWrapper>
+
 
       <HeaderNavWrapper>
         {itemActions.map((item, id) => (
@@ -55,6 +69,8 @@ const Header = () => {
           </HeaderNavItem>
         ))}
       </HeaderNavWrapper>
+
+
     </HeaderWrapper>
   );
 };
