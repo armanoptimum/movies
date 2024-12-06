@@ -1,18 +1,10 @@
-function FooterNavItem({ children, header, button, img, goTo, ...props }) {
+import { FooterNavItemLink, FooterNavItemWrapper } from './styles';
+
+function FooterNavItem({ children, goTo, header, ...props }) {
   return (
-    <li {...props}>
-      {img ? (
-        <a href="/">
-          <img src={img} alt={children} />{' '}
-        </a>
-      ) : button ? (
-        <button>{children}</button>
-      ) : header ? (
-        <h3>{children}</h3>
-      ) : (
-        <a href={goTo}>{children}</a>
-      )}
-    </li>
+    <FooterNavItemWrapper $isHeader={header} {...props}>
+      <FooterNavItemLink href={goTo}>{children}</FooterNavItemLink>
+    </FooterNavItemWrapper>
   );
 }
 

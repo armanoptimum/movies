@@ -1,11 +1,12 @@
 import { useContext, useEffect, useRef } from 'react';
-import { IMAGE_PREFIX, formatDate, calculateRating } from './utils';
+import { formatDate, calculateRating } from './utils.js';
 import Card from './Card';
-import CardsWrapper from './styles';
-import { MovieContex } from '../PopularMovies/utils/moviePrivider';
+import { CardsWrapper, LoadMoreButton, LoadMoreText } from './styles';
+import { MediaContex } from '../Media/moviePrivider.jsx';
+const { VITE_APP_IMAGE_PREFIX } = import.meta.env;
 
 export default function Cards() {
-  const { page, setPage, movies } = useContext(MovieContex);
+  const { page, setPage, movies } = useContext(MediaContex);
   const buttonRef = useRef();
 
   useEffect(() => {
@@ -23,7 +24,6 @@ export default function Cards() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movies]);
 
   const loadMoreHandler = () => {
@@ -36,15 +36,15 @@ export default function Cards() {
         <Card
           key={movie.id}
           movieName={movie.title}
-          img={IMAGE_PREFIX + movie.poster_path}
+          img={VITE_APP_IMAGE_PREFIX + movie.poster_path}
           rating={calculateRating(movie.vote_average)}
           date={formatDate(movie.release_date)}
           description={movie.overview}
         />
       ))}
-      <button id="load-more" ref={buttonRef} onClick={loadMoreHandler}>
-        <span>Load More</span>
-      </button>
+      <LoadMoreButton ref={buttonRef} onClick={loadMoreHandler}>
+        <LoadMoreText>Load More</LoadMoreText>
+      </LoadMoreButton>
     </CardsWrapper>
   );
 }

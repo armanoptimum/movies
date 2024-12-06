@@ -1,19 +1,20 @@
 import { useContext } from 'react';
 import Option from './Option';
-import OptionsWrapper from './styles';
-import { MovieContex } from '../PopularMovies/utils/moviePrivider';
+import { Wrapper, SearchButton } from './styles';
+import { MediaContex } from '../Media/moviePrivider';
 
 export default function Options({ onSearchHandler }) {
-  const { activeSortOption, setActiveSortOption } = useContext(MovieContex);
+  const { activeSortOption, setActiveSortOption } = useContext(MediaContex);
+
   return (
-    <OptionsWrapper>
+    <Wrapper>
       <Option activeSortOption={activeSortOption} setActiveSortOption={setActiveSortOption}>
         Sort
       </Option>
       <Option>Filters</Option>
-      <button onClick={onSearchHandler} className="search active">
+      <SearchButton onClick={onSearchHandler} $active>
         Search
-      </button>
-    </OptionsWrapper>
+      </SearchButton>
+    </Wrapper>
   );
 }

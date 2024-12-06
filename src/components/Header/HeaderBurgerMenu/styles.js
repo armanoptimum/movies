@@ -1,50 +1,36 @@
 import styled from 'styled-components';
 
-const BurgerMenuWrapper = styled.div`
-  display: ${({ $show }) => {
-    return $show ? 'block' : 'none';
-  }};
+export const BurgerMenuWrapper = styled.div`
+  display: ${({ $show }) => ($show ? 'block' : 'none')};
   position: absolute;
-  top: 70px;
+  top: 3.75rem;
   left: 0;
   height: 100vh;
   width: 100%;
   background: var(--primary-color-burger);
-  backdrop-filter: blur(20px);
-  z-index: 10;
+  backdrop-filter: blur(1.25rem);
   padding: var(--padding-medium);
+`;
 
-  & ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-  }
+export const BurgerMenuDropDownWrapper = styled.ul`
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-extra-small);
+  margin-bottom: 1rem;
+`;
 
-  & .parent-list {
-    margin-bottom: 0.7rem;
-    font-size: var(--font-size-large);
-  }
+export const OtherLinksWrapper = styled.ul`
+  list-style-type: none;
+  color: var(--text-color-muted-medium);
 
-  & .dropdown {
-    font-size: var(--font-size-medium);
-    font-weight: 300;
-    display: none;
-  }
-
-  & .parent-list.active > .dropdown {
-    font-size: var(--font-size-medium);
-    font-weight: 300;
-    display: flex;
-  }
-
-  & .other {
-    color: var(--text-color-muted-light);
-    font-weight: 300;
-  }
-
-  & .other p {
-    margin-bottom: 0.3rem;
+  & li:last-child {
+    margin-top: 1rem;
   }
 `;
 
-export default BurgerMenuWrapper;
+export const OtherLinksItem = styled.li`
+  list-style-type: none;
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+`;

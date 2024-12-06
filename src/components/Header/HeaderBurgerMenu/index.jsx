@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import HeaderNavItem from '../HeaderNavItem';
-import BurgerMenuWrapper from './styles';
+import { BurgerMenuDropDownWrapper, BurgerMenuWrapper, OtherLinksItem, OtherLinksWrapper } from './styles';
+import { additionalLiks, navItemsWithDropDown } from './data';
+import BurgerDropDown from './BurgerDropDown';
 
 export default function BurgerMenu({ burgerActive }) {
   const [activeDropdowns, setActiveDropdowns] = useState([]);
@@ -15,40 +16,26 @@ export default function BurgerMenu({ burgerActive }) {
     });
   };
   return (
-    <BurgerMenuWrapper $show={burgerActive ? 'show' : ''}>
-      <ul>
-        <HeaderNavItem
-          onClick={() => toggleDropdown(0)}
-          isActiveDropDown={activeDropdowns.includes(0)}
-          href="popular"
-          dropdownItems={['Popular', 'Now Playing', 'Upcoming', 'Top Rated']}
-        >
-          Movies
-        </HeaderNavItem>
-        <HeaderNavItem
-          onClick={() => toggleDropdown(1)}
-          isActiveDropDown={activeDropdowns.includes(1)}
-          dropdownItems={['Popular Show', 'Airing Today', 'On TV', 'Top Rated']}
-        >
-          TV Shows
-        </HeaderNavItem>
-        <HeaderNavItem
-          onClick={() => toggleDropdown(2)}
-          isActiveDropDown={activeDropdowns.includes(2)}
-          dropdownItems={['Popular People']}
-        >
-          People
-        </HeaderNavItem>
-      </ul>
-      <div className="other">
-        <p>Contribution Bible</p>
-        <p>Discussion</p>
-        <p>Leaderboard</p>
-        <p>API</p>
-        <p>Support</p>
-        <p>About</p>
-        <p>Logout</p>
-      </div>
+    <BurgerMenuWrapper $show={burgerActive}>
+      <BurgerMenuDropDownWrapper>
+        {navItemsWithDropDown.map((item, id) => (
+          <BurgerDropDown
+            isActiveDropDown={activeDropdowns.includes(id)}
+            handleToggleDropdown={() => toggleDropdown(id)}
+            href={item.href}
+            key={id}
+            dropDownItems={item.dropdownItems}
+          >
+            {item.name}
+          </BurgerDropDown>
+        ))}
+      </BurgerMenuDropDownWrapper>
+
+      <OtherLinksWrapper>
+        {additionalLiks.map((name, id) => (
+          <OtherLinksItem key={id}>{name}</OtherLinksItem>
+        ))}
+      </OtherLinksWrapper>
     </BurgerMenuWrapper>
   );
 }

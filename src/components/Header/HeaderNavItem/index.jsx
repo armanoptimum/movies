@@ -1,32 +1,20 @@
 import { NavLink } from 'react-router-dom';
+import { HeaderDropDownItem, HeaderDropDownWrapper, HeaderNavItemLogo, HeaderNavItemWrapper } from './styles';
 
-function HeaderNavItem({ children, href, dropdownItems, onClick, source, logo, isActiveDropDown, ...props }) {
+function HeaderNavItem({ children, href, dropdownItems, onClick, source, ...props }) {
   return (
-    <li
-      onClick={onClick ? onClick : null}
-      className={isActiveDropDown ? 'parent-list active' : 'parent-list'}
-      {...props}
-    >
-      {logo ? (
-        <NavLink id="logo" to="/">
-          <img src={source} alt="Logo" />
-        </NavLink>
-      ) : source ? (
-        <img src={source} alt={children} />
-      ) : (
-        <NavLink to={href}>{children}</NavLink>
-      )}
-
+    <HeaderNavItemWrapper onClick={onClick ? onClick : null} {...props}>
+      {source ? <HeaderNavItemLogo src={source} alt={children} /> : <NavLink to={href}>{children}</NavLink>}
       {dropdownItems && (
-        <ul className="dropdown">
+        <HeaderDropDownWrapper>
           {dropdownItems.map((item, index) => (
-            <li key={index}>
-              <NavLink to={item === 'Popular' ? `${item.toLowerCase()}` : '#'}>{item}</NavLink>
-            </li>
+            <HeaderDropDownItem key={index}>
+              <NavLink to={href + '/' + item.href}>{item.name}</NavLink>
+            </HeaderDropDownItem>
           ))}
-        </ul>
+        </HeaderDropDownWrapper>
       )}
-    </li>
+    </HeaderNavItemWrapper>
   );
 }
 

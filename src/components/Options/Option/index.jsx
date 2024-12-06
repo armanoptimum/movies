@@ -1,7 +1,19 @@
-import OptionWrapper from './styles';
-import arrowRight from '../../../assets/arrow-right.svg';
+import {
+  Wrapper,
+  Header,
+  Name,
+  Drop,
+  Divider,
+  Action,
+  List,
+  Current,
+  ListOptions,
+  OptionItem,
+  OptionName,
+} from './styles';
+import arrowRight from '@/assets/arrow-right.svg';
 import { useState } from 'react';
-import options from './utils';
+import options from './data';
 
 export default function Option({ children, activeSortOption, setActiveSortOption }) {
   const [isOpenHeader, setIsOpenHeader] = useState(false);
@@ -20,33 +32,33 @@ export default function Option({ children, activeSortOption, setActiveSortOption
   };
 
   return (
-    <OptionWrapper>
-      <div onClick={children === 'Sort' ? openHeaderHandler : null} className="header">
-        <h2 className="name">{children}</h2>
-        <span className={isOpenHeader ? 'drop active' : 'drop'}>
+    <Wrapper>
+      <Header onClick={children === 'Sort' ? openHeaderHandler : null}>
+        <Name>{children}</Name>
+        <Drop $active={isOpenHeader}>
           <img src={arrowRight} alt="options" />
-        </span>
-      </div>
-      <hr className={isOpenHeader ? 'active' : ''} />
-      <div className={isOpenHeader ? 'active action' : 'action'}>
-        <h5>{children} Results By</h5>
-        <div onClick={openListHandler} id="list">
-          <div className="current">
-            <p className="active">{activeSortOption}</p>
-            <span className="drop list-drop">
+        </Drop>
+      </Header>
+      <Divider $active={isOpenHeader} />
+      <Action $active={isOpenHeader}>
+        <OptionName>{children} Results By</OptionName>
+        <List onClick={openListHandler}>
+          <Current>
+            <p>{activeSortOption}</p>
+            <Drop>
               <img src={arrowRight} alt="options" />
-            </span>
-            <div onClick={listOptionClickHandler} className={isOpenList ? 'list-options active' : 'list-options'}>
-              {children === 'Sort' &&
-                options.map((option, id) => (
-                  <p className={activeSortOption === option ? 'active' : ''} onClick={listOptionClickHandler} key={id}>
-                    {option}
-                  </p>
-                ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </OptionWrapper>
+            </Drop>
+          </Current>
+          <ListOptions $active={isOpenList}>
+            {children === 'Sort' &&
+              options.map((option, id) => (
+                <OptionItem key={id} $active={activeSortOption === option} onClick={listOptionClickHandler}>
+                  {option}
+                </OptionItem>
+              ))}
+          </ListOptions>
+        </List>
+      </Action>
+    </Wrapper>
   );
 }

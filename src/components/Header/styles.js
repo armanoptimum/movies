@@ -12,20 +12,11 @@ export const HeaderWrapper = styled.header`
   white-space: nowrap;
   transition: top 0.5s ease;
   position: sticky;
-  top: ${({ $sticky }) => ($sticky ? '0' : '-100px')};
+  top: ${({ $sticky }) => ($sticky ? '0' : '-6.25rem')};
+  z-index: 100;
 
-  @media (min-width: 1000px) {
-    padding: var(--padding-small) var(--padding-large);
-  }
-
-  .sticky {
-    position: sticky;
-  }
-
-  #logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @media (min-width: 62rem) {
+    padding: var(--padding-medium) var(--padding-large);
   }
 `;
 
@@ -37,84 +28,55 @@ export const HeaderNavWrapper = styled.ul`
   gap: 1.3rem;
 
   &:nth-of-type(3) li:nth-child(2) a {
-    border: 1px solid #fff;
-    border-radius: 3px;
+    border: 0.07rem solid #fff;
+    border-radius: 0.2rem;
     padding: 0.1rem 0.2rem;
   }
 
-  &:nth-of-type(1) li:nth-child(1),
-  &:nth-of-type(1) li:nth-child(3),
-  &:nth-of-type(1) li:nth-child(4),
-  &:nth-of-type(1) li:nth-child(5),
-  &:nth-of-type(1) li:nth-child(6) {
-    display: none;
+  &:nth-of-type(1) {
+    li:nth-child(1),
+    li:nth-child(3),
+    li:nth-child(4),
+    li:nth-child(5),
+    li:nth-child(6) {
+      display: none;
+    }
   }
 
-  &:nth-of-type(3) li:nth-child(1),
-  &:nth-of-type(3) li:nth-child(2),
-  &:nth-of-type(3) li:nth-child(3),
-  &:nth-of-type(3) li:nth-child(4) {
-    display: none;
+  &:nth-of-type(3) {
+    li:nth-child(1),
+    li:nth-child(2),
+    li:nth-child(3),
+    li:nth-child(4) {
+      display: none;
+    }
   }
 
-  & > li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .dropdown {
-    display: none;
-    gap: 1rem;
-    width: 150px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    font-weight: 300;
-    background-color: #fff;
-    padding: 0.5rem 0;
-    list-style-type: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 7px;
-    font-size: var(--font-size-small);
-    z-index: 1;
-  }
-
-  .dropdown a {
-    color: #575353;
-    padding: 0.2rem 0.5rem;
-  }
-
-  li:hover .dropdown,
-  .dropdown:hover {
-    display: block;
-  }
-
-  .dropdown li:hover {
-    background-color: #ebebeb;
-  }
-
-  @media (min-width: 1000px) {
+  @media (min-width: 62.5rem) {
     display: flex;
 
-    &:nth-of-type(1) li:nth-child(1),
-    &:nth-of-type(1) li:nth-child(3),
-    &:nth-of-type(1) li:nth-child(4),
-    &:nth-of-type(1) li:nth-child(5),
-    &:nth-of-type(1) li:nth-child(6),
-    &:nth-of-type(3) li:nth-child(1),
-    &:nth-of-type(3) li:nth-child(2),
-    &:nth-of-type(3) li:nth-child(3),
-    &:nth-of-type(3) li:nth-child(4) {
-      display: flex;
+    &:nth-of-type(1) {
+      li:nth-child(1),
+      li:nth-child(3),
+      li:nth-child(4),
+      li:nth-child(5),
+      li:nth-child(6) {
+        display: flex;
+      }
+    }
+
+    &:nth-of-type(3) {
+      li:nth-child(1),
+      li:nth-child(2),
+      li:nth-child(3),
+      li:nth-child(4) {
+        display: flex;
+      }
     }
 
     &:nth-of-type(1) li:nth-child(2),
-    &:nth-of-type(3) li:nth-child(5),
-    &:nth-of-type(2) li:nth-child(1) {
+    &:nth-of-type(2) li:nth-child(1),
+    &:nth-of-type(3) li:nth-child(5) {
       display: none;
     }
   }
