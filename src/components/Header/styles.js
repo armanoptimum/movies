@@ -33,38 +33,50 @@ export const HeaderNavWrapper = styled.ul`
     padding: 0.1rem 0.2rem;
   }
 
-  &:nth-of-type(1) li:nth-child(1),
-  &:nth-of-type(1) li:nth-child(3),
-  &:nth-of-type(1) li:nth-child(4),
-  &:nth-of-type(1) li:nth-child(5),
-  &:nth-of-type(1) li:nth-child(6) {
-    display: none;
+  &:nth-of-type(1) {
+    li:nth-child(1),
+    li:nth-child(3),
+    li:nth-child(4),
+    li:nth-child(5),
+    li:nth-child(6) {
+      display: none;
+    }
   }
 
-  &:nth-of-type(3) li:nth-child(1),
-  &:nth-of-type(3) li:nth-child(2),
-  &:nth-of-type(3) li:nth-child(3),
-  &:nth-of-type(3) li:nth-child(4) {
-    display: none;
+  &:nth-of-type(3) {
+    li:nth-child(1),
+    li:nth-child(2),
+    li:nth-child(3),
+    li:nth-child(4) {
+      display: none;
+    }
   }
 
   @media (min-width: 62.5rem) {
     display: flex;
-    &:nth-of-type(1) li:nth-child(1),
-    &:nth-of-type(1) li:nth-child(3),
-    &:nth-of-type(1) li:nth-child(4),
-    &:nth-of-type(1) li:nth-child(5),
-    &:nth-of-type(1) li:nth-child(6),
-    &:nth-of-type(3) li:nth-child(1),
-    &:nth-of-type(3) li:nth-child(2),
-    &:nth-of-type(3) li:nth-child(3),
-    &:nth-of-type(3) li:nth-child(4) {
-      display: flex;
+
+    &:nth-of-type(1) {
+      li:nth-child(1),
+      li:nth-child(3),
+      li:nth-child(4),
+      li:nth-child(5),
+      li:nth-child(6) {
+        display: flex;
+      }
+    }
+
+    &:nth-of-type(3) {
+      li:nth-child(1),
+      li:nth-child(2),
+      li:nth-child(3),
+      li:nth-child(4) {
+        display: flex;
+      }
     }
 
     &:nth-of-type(1) li:nth-child(2),
-    &:nth-of-type(3) li:nth-child(5),
-    &:nth-of-type(2) li:nth-child(1) {
+    &:nth-of-type(2) li:nth-child(1),
+    &:nth-of-type(3) li:nth-child(5) {
       display: none;
     }
   }
