@@ -1,4 +1,4 @@
-;const formatDate = (dateString) => {
+const formatDate = (dateString) => {
   const date = new Date(dateString);
   try {
     const formattedDate = new Intl.DateTimeFormat('en-US', {

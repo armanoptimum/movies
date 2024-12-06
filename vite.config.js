@@ -7,7 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/src',
-      '@backend' : '/backend'
+      '@backend': '/backend',
     },
   },
 });
