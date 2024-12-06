@@ -4,7 +4,7 @@ import { HeaderDropDownItem, HeaderDropDownWrapper, HeaderNavItemLogo, HeaderNav
 function HeaderNavItem({ children, href, dropdownItems, onClick, source, ...props }) {
   return (
     <HeaderNavItemWrapper onClick={onClick ? onClick : null} {...props}>
-      {source ? <HeaderNavItemLogo src={source} alt={children} /> :  <NavLink to={href}>{children}</NavLink>}
+      {source ? <HeaderNavItemLogo src={source} alt={children} /> : <NavLink to={href}>{children}</NavLink>}
       {dropdownItems && (
         <HeaderDropDownWrapper>
           {dropdownItems.map((item, index) => (

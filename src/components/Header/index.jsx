@@ -38,17 +38,16 @@ const Header = () => {
       <BurgerMenu burgerActive={burgerToggle} />
 
       <HeaderNavWrapper>
-        
-      <HeaderNavItemWrapper>
-        <NavLink to="/">
+        <HeaderNavItemWrapper>
+          <NavLink to="/">
             <HeaderNavItemLogo src={logo} alt="Logo" />
           </NavLink>
-      </HeaderNavItemWrapper>
+        </HeaderNavItemWrapper>
 
-      <HeaderNavItemWrapper>
-        <HeaderNavItemLogo onClick={handleBurgerToggle} src={burgerIcon} alt={'burger'} />
-      </HeaderNavItemWrapper>
-        
+        <HeaderNavItemWrapper>
+          <HeaderNavItemLogo onClick={handleBurgerToggle} src={burgerIcon} alt={'burger'} />
+        </HeaderNavItemWrapper>
+
         {itemsWithDropDown.map((item, id) => (
           <HeaderNavItem key={id} href={item.href} dropdownItems={item.dropdownItems}>
             {item.label}
@@ -56,11 +55,11 @@ const Header = () => {
         ))}
       </HeaderNavWrapper>
 
-
       <HeaderNavWrapper>
-        <HeaderNavItemWrapper><HeaderNavItemLogo src={logoMobile} alt="Mobile logo" /></HeaderNavItemWrapper>
+        <HeaderNavItemWrapper>
+          <HeaderNavItemLogo src={logoMobile} alt="Mobile logo" />
+        </HeaderNavItemWrapper>
       </HeaderNavWrapper>
-
 
       <HeaderNavWrapper>
         {itemActions.map((item, id) => (
@@ -69,8 +68,6 @@ const Header = () => {
           </HeaderNavItem>
         ))}
       </HeaderNavWrapper>
-
-
     </HeaderWrapper>
   );
 };
