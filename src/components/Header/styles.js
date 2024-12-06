@@ -16,7 +16,7 @@ export const HeaderWrapper = styled.header`
   z-index: 100;
 
   @media (min-width: 62rem) {
-    padding: var(--padding-small) var(--padding-large);
+    padding: var(--padding-medium) var(--padding-large);
   }
 `;
 
