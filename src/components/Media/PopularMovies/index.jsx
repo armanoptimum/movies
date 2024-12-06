@@ -2,15 +2,15 @@ import { useContext, useEffect } from 'react';
 import Cards from '@/components/Cards';
 import Options from '@/components/Options';
 import { Wrapper, Title, Content } from './styles';
-import { fetchData } from '@/components/Cards/utils';
 import { sortMovies } from '@/components/Options/Option/data';
 import { MediaContex } from '../moviePrivider';
+import { fetchMovies } from '@backend/media/api';
 
 export default function PopularMovies() {
   const { activeSortOption, page, movies, setMovies } = useContext(MediaContex);
 
   useEffect(() => {
-    fetchData(page)
+    fetchMovies(page)
       .then((moviesData) => {
         if (moviesData.length > 0) {
           setMovies((prevMovies) => {
