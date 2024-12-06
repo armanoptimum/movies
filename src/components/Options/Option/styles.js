@@ -20,7 +20,7 @@ export const Header = styled.div`
 `;
 
 export const Name = styled.h2`
-  font-size: var(--font-size-small-plus);
+  font-size: var(--font-size-medium);
   font-weight: 600;
 `;
 
@@ -79,12 +79,12 @@ export const OptionItem = styled.p`
   padding: var(--padding-small-extra);
   font-size: var(--font-size-small-plus);
   background-color: ${({ $active }) => ($active ? 'var(--secondary-color)' : 'transparent')};
-  color: ${({ $active }) => ($active ? 'var(--text-color-light)' : 'inherit')};
+  color: ${({ $active }) => ($active ? 'var(--text-color-light)' : 'var(--primary)')};
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
 
   &:hover {
-    background-color: ${({ active }) => (active ? 'var(--primary-color)' : 'var(--text-color-muted-light)')};
+    background-color: ${({ $active }) => ($active ? 'var(--primary-color)' : 'var(--text-color-muted-light)')};
   }
 `;
