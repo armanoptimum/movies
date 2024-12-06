@@ -11,7 +11,7 @@ export const HeaderDropDownWrapper = styled.ul`
   background-color: #fff;
   padding: 0.5rem 0;
   list-style-type: none;
-  box-shadow: 0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
   font-size: var(--font-size-small);
   z-index: 1;
@@ -24,7 +24,7 @@ export const HeaderDropDownWrapper = styled.ul`
 
 export const HeaderDropDownItem = styled.li`
   &:hover {
-    background-color: #ebebeb;
+    background-color: var(--text-color-muted-light);
   }
 `;
 

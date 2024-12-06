@@ -1,7 +1,7 @@
 import Main from '@/components/Main';
-import MediaProvider from '../components/Media/moviePrivider';
-import MediaLayout from '../components/Media';
-import MovieCategory from '../components/Media/MovieCategory';
+import MediaProvider from '@/components/Media/moviePrivider';
+import MediaLayout from '@/components/Media';
+import MovieCategory from '@/components/Media/MovieCategory';
 
 const routeConfig = [
   {

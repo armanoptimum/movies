@@ -37,6 +37,4 @@ export const ThreeDots = styled.img`
   }
 `;
 
-export const MovieImg = styled.img`
-  min-height: 60%;
-`;
+export const MovieImg = styled.img``;
