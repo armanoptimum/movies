@@ -5,8 +5,8 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   box-shadow: var(--box-shadow);
   background-color: var(--text-color-light);
-  border-radius: var(--border-radius);
-  border: 0.06rem solid var(--border-color);
+  border-radius: var(--border-radius-medium);
+  border: 0.15rem solid var(--border-color);
   overflow: hidden;
   font-size: var(--font-size-extra-small);
   transition: box-shadow 0.3s ease;
@@ -37,4 +37,6 @@ export const ThreeDots = styled.img`
   }
 `;
 
-export const MovieImg = styled.img``;
+export const MovieImg = styled.img`
+  min-height: 60%;
+`;
