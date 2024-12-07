@@ -33,27 +33,26 @@ export default function Option({ children, activeSortOption, setActiveSortOption
 
   return (
     <Wrapper>
-
-{/* type */}
-      <Header onClick={children === 'Sort' ? openHeaderHandler : null}>
+      {/* type */}
+      <Header onClick={ openHeaderHandler}>
         <Name>{children}</Name>
         <Drop $active={isOpenHeader}>
           <img src={arrowRight} alt="options" />
         </Drop>
       </Header>
- {/* type */}
+      {/* type */}
 
-{/* line */}
+      {/* line */}
       <Divider $active={isOpenHeader} />
- {/* line */}
+      {/* line */}
 
-        {/* dynamic contnet */}
+      {/* dynamic contnet */}
       <Action $active={isOpenHeader}>
         <OptionName>{children} Results By</OptionName>
         <List onClick={openListHandler}>
           <Current>
             <p>{activeSortOption}</p>
-            <Drop>
+            <Drop $active>
               <img src={arrowRight} alt="options" />
             </Drop>
           </Current>
@@ -68,7 +67,7 @@ export default function Option({ children, activeSortOption, setActiveSortOption
         </List>
       </Action>
       {/* dynamic contnet */}
-
+      
     </Wrapper>
   );
 }

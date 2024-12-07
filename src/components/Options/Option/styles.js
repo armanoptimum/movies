@@ -25,11 +25,11 @@ export const Name = styled.h2`
 `;
 
 export const Drop = styled.span`
-    
   display: flex;
   align-items: center;
   transform: ${({ $active }) => ($active ? 'rotate(90deg)' : 'none')};
   transition: transform 0.3s ease;
+  z-index: 1;
 `;
 
 export const Divider = styled.hr`
@@ -39,6 +39,7 @@ export const Divider = styled.hr`
 `;
 
 export const Action = styled.div`
+  z-index: 2;
   padding: var(--padding-small) var(--padding-medium);
   font-size: var(--font-size-medium);
   display: ${({ $active }) => ($active ? 'block' : 'none')};
