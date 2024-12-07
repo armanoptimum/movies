@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import options from '@/components/Options/Option/data';
+import { options } from '../Options/Sort/utility';
 
 export const MediaContex = createContext();
 
