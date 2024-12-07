@@ -1,73 +1,27 @@
-import {
-  Wrapper,
-  Header,
-  Name,
-  Drop,
-  Divider,
-  Action,
-  List,
-  Current,
-  ListOptions,
-  OptionItem,
-  OptionName,
-} from './styles';
-import arrowRight from '@/assets/arrow-right.svg';
+import { OptionWrapper, OptionHeader, OptionName, Drop, Divider } from './styles';
 import { useState } from 'react';
-import options from './data';
+import arrowRight from '@/assets/arrow-right.svg';
+import Sort from '../Sort';
 
 export default function Option({ children, activeSortOption, setActiveSortOption }) {
   const [isOpenHeader, setIsOpenHeader] = useState(false);
-  const [isOpenList, setIsOpenList] = useState(false);
 
   const openHeaderHandler = () => {
     setIsOpenHeader((prev) => !prev);
   };
 
-  const openListHandler = () => {
-    setIsOpenList((prev) => !prev);
-  };
-
-  const listOptionClickHandler = (event) => {
-    setActiveSortOption(event.target.innerText);
-  };
-
   return (
-    <Wrapper>
+    <OptionWrapper>
       {/* type */}
-      <Header onClick={ openHeaderHandler}>
-        <Name>{children}</Name>
+      <OptionHeader onClick={openHeaderHandler}>
+        <OptionName>{children}</OptionName>
         <Drop $active={isOpenHeader}>
           <img src={arrowRight} alt="options" />
         </Drop>
-      </Header>
+      </OptionHeader>
       {/* type */}
-
-      {/* line */}
       <Divider $active={isOpenHeader} />
-      {/* line */}
-
-      {/* dynamic contnet */}
-      <Action $active={isOpenHeader}>
-        <OptionName>{children} Results By</OptionName>
-        <List onClick={openListHandler}>
-          <Current>
-            <p>{activeSortOption}</p>
-            <Drop $active>
-              <img src={arrowRight} alt="options" />
-            </Drop>
-          </Current>
-          <ListOptions $active={isOpenList}>
-            {children === 'Sort' &&
-              options.map((option, id) => (
-                <OptionItem key={id} $active={activeSortOption === option} onClick={listOptionClickHandler}>
-                  {option}
-                </OptionItem>
-              ))}
-          </ListOptions>
-        </List>
-      </Action>
-      {/* dynamic contnet */}
-      
-    </Wrapper>
+      <Sort activeSortOption={activeSortOption} setActiveSortOption={setActiveSortOption} isOpenHeader={isOpenHeader} />
+    </OptionWrapper>
   );
 }
