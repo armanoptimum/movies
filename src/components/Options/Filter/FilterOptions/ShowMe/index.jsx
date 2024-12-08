@@ -1,21 +1,20 @@
 import {
-  ShowMeHeader,
-  ShowMeHeaderQuestionMark,
+  QuestionMark,
   ShowMeWrapper,
   RadioGroup,
   RadioOption,
   RadioInput,
   RadioLabel,
 } from './styles';
-import { FilterOptionHeaderName } from '../../styles';
+import { FilterOptionHeaderName, FilterHeaderWrapper } from '../../styles';
 
 export default function ShowMe() {
   return (
     <ShowMeWrapper>
-      <ShowMeHeader>
+      <FilterHeaderWrapper>
         <FilterOptionHeaderName>Show Me</FilterOptionHeaderName>
-        <ShowMeHeaderQuestionMark />
-      </ShowMeHeader>
+        <QuestionMark />
+      </FilterHeaderWrapper>
 
       <RadioGroup>
         <RadioOption>

@@ -5,14 +5,7 @@ export const ShowMeWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const ShowMeHeader = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-`;
-
-export const ShowMeHeaderQuestionMark = styled.span`
+export const QuestionMark = styled.span`
   display: flex;
   align-content: center;
   justify-content: center;
