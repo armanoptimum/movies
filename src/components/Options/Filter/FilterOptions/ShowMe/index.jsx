@@ -1,11 +1,12 @@
+import { QuestionMark, ShowMeWrapper } from './styles';
 import {
-  QuestionMark,
-  ShowMeWrapper,
-} from './styles';
-import { FilterOptionHeaderName, FilterHeaderWrapper,   RadioCheckboxGroup,
-    RadioCheckboxOption,
-    Radio,
-    Label, } from '../../styles';
+  FilterOptionHeaderName,
+  FilterHeaderWrapper,
+  RadioCheckboxGroup,
+  RadioCheckboxOption,
+  Radio,
+  Label,
+} from '../../styles';
 
 export default function ShowMe() {
   return (

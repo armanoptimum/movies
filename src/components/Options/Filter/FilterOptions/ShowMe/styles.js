@@ -52,4 +52,3 @@ export const QuestionMark = styled.span`
     filter: brightness(90%);
   }
 `;
-
