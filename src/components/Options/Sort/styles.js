@@ -4,7 +4,6 @@ export const SortActionWrapper = styled.div`
   z-index: 2;
   padding: var(--padding-small) var(--padding-medium);
   font-size: var(--font-size-medium);
-  display: ${({ $active }) => ($active ? 'block' : 'none')};
 `;
 
 export const SortyByList = styled.div`

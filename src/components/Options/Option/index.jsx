@@ -1,15 +1,13 @@
-import { OptionWrapper, OptionHeader, OptionName, Drop, Divider } from './styles';
 import { useState } from 'react';
+import { OptionWrapper, OptionHeader, OptionName, Drop, Divider } from './styles';
 import arrowRight from '@/assets/arrow-right.svg';
-import Sort from '../Sort';
 
-export default function Option({ name, activeSortOption, setActiveSortOption, children }) {
-  const [isOpenHeader, setIsOpenHeader] = useState(false);
-
-  const openHeaderHandler = () => {
-    setIsOpenHeader((prev) => !prev);
-  };
-
+export default function Option({ children, name }) {
+    const [isOpenHeader, setIsOpenHeader] = useState(false);
+    const openHeaderHandler = () => {
+      setIsOpenHeader((prev) => !prev);
+    };
+  
   return (
     <OptionWrapper>
       <OptionHeader onClick={openHeaderHandler}>
@@ -19,7 +17,7 @@ export default function Option({ name, activeSortOption, setActiveSortOption, ch
         </Drop>
       </OptionHeader>
       <Divider $active={isOpenHeader} />
-      <Sort activeSortOption={activeSortOption} setActiveSortOption={setActiveSortOption} isOpenHeader={isOpenHeader} />
+      {isOpenHeader && children}
     </OptionWrapper>
   );
 }

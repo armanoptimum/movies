@@ -4,7 +4,7 @@ import arrowRight from '@/assets/arrow-right.svg';
 import { Drop } from '../Option/styles';
 import { options } from './utility';
 
-export default function Sort({ activeSortOption, setActiveSortOption, isOpenHeader }) {
+export default function Sort({ activeSortOption, setActiveSortOption }) {
   const [isOpenList, setIsOpenList] = useState(false);
 
   const openListHandler = () => {
@@ -16,7 +16,7 @@ export default function Sort({ activeSortOption, setActiveSortOption, isOpenHead
   };
 
   return (
-    <SortActionWrapper $active={isOpenHeader}>
+    <SortActionWrapper>
       <SortHeader>Sort Results By</SortHeader>
       <SortyByList onClick={openListHandler}>
         <CurrentSortOption>

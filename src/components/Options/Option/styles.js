@@ -20,7 +20,7 @@ export const OptionHeader = styled.div`
 `;
 
 export const OptionName = styled.h2`
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small-plus);
   font-weight: 600;
 `;
 
