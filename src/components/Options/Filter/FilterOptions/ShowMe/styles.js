@@ -8,13 +8,8 @@ export const ShowMeWrapper = styled.div`
 export const ShowMeHeader = styled.div`
   display: flex;
   align-items: center;
-  font-size: var(--font-size-small);
   gap: 0.5rem;
-  color: var(--text-color-muted);
   margin-bottom: 0.5rem;
-`;
-
-export const ShowMeHeaderName = styled.p`
 `;
 
 export const ShowMeHeaderQuestionMark = styled.span`
@@ -77,23 +72,22 @@ export const RadioOption = styled.label`
   gap: 0.5rem;
 `;
 
-
 export const RadioInput = styled.input`
   appearance: none;
   width: 1rem;
   height: 1rem;
   border: 0.15rem solid var(--text-color-muted-light);
-  border-radius: 50%;  
+  border-radius: 50%;
   cursor: pointer;
-  transition: border-color 0.3s ease; 
+  transition: border-color 0.3s ease;
 
   &:checked {
-    border: 0.30rem solid var(--secondary-color); 
+    border: 0.3rem solid var(--secondary-color);
   }
 `;
 
-
 export const RadioLabel = styled.label`
- font-size: var(--font-size-small);
+  font-size: var(--font-size-small);
   color: var(--text-color-dark-light);
+  cursor: pointer;
 `;

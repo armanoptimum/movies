@@ -1,28 +1,36 @@
-import { ShowMeHeader, ShowMeHeaderName, ShowMeHeaderQuestionMark, ShowMeWrapper, RadioGroup, RadioOption, RadioInput, RadioLabel } from './styles';
+import {
+  ShowMeHeader,
+  ShowMeHeaderQuestionMark,
+  ShowMeWrapper,
+  RadioGroup,
+  RadioOption,
+  RadioInput,
+  RadioLabel,
+} from './styles';
+import { FilterOptionHeaderName } from '../../styles';
 
 export default function ShowMe() {
   return (
     <ShowMeWrapper>
       <ShowMeHeader>
-        <ShowMeHeaderName>Show Me</ShowMeHeaderName>
+        <FilterOptionHeaderName>Show Me</FilterOptionHeaderName>
         <ShowMeHeaderQuestionMark />
       </ShowMeHeader>
 
       <RadioGroup>
         <RadioOption>
-          <RadioInput type="radio" name="movies" value="everything" defaultChecked />
-          <RadioLabel>Everything</RadioLabel>
+          <RadioInput id="everything" type="radio" name="movies" value="everything" defaultChecked />
+          <RadioLabel htmlFor="everything">Everything</RadioLabel>
         </RadioOption>
         <RadioOption>
-          <RadioInput type="radio" name="movies" value="not-seen" />
-          <RadioLabel>Movies I Havent Seen</RadioLabel>
+          <RadioInput id="havent-seen" type="radio" name="movies" />
+          <RadioLabel htmlFor="havent-seen">Movies I Havent Seen</RadioLabel>
         </RadioOption>
         <RadioOption>
-          <RadioInput type="radio" name="movies" value="seen" />
-          <RadioLabel>Movies I Have Seen</RadioLabel>
+          <RadioInput id="seen" type="radio" name="movies" />
+          <RadioLabel htmlFor="seen">Movies I Have Seen</RadioLabel>
         </RadioOption>
       </RadioGroup>
-
     </ShowMeWrapper>
   );
 }
