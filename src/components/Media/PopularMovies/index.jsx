@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import Cards from '@/components/Cards';
 import Options from '@/components/Options';
 import { Wrapper, Title, Content } from './styles';
-import { sortMovies } from '@/components/Options/Option/data';
+import { sortMovies } from '@/components/Options/Sort/utility';
 import { MediaContex } from '../moviePrivider';
 import { fetchMovies } from '@backend/media/api';
 

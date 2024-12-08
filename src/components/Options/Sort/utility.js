@@ -1,4 +1,4 @@
-const options = [
+export const options = [
   'Popularity Descending',
   'Popularity Ascending',
   'Rating Descending',
@@ -35,5 +35,3 @@ export const sortMovies = (arr, activeOption) => {
     return 0;
   });
 };
-
-export default options;

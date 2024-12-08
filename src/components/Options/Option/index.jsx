@@ -1,64 +1,23 @@
-import {
-  Wrapper,
-  Header,
-  Name,
-  Drop,
-  Divider,
-  Action,
-  List,
-  Current,
-  ListOptions,
-  OptionItem,
-  OptionName,
-} from './styles';
-import arrowRight from '@/assets/arrow-right.svg';
 import { useState } from 'react';
-import options from './data';
+import { OptionWrapper, OptionHeader, OptionName, Drop, Divider } from './styles';
+import arrowRight from '@/assets/arrow-right.svg';
 
-export default function Option({ children, activeSortOption, setActiveSortOption }) {
+export default function Option({ children, name }) {
   const [isOpenHeader, setIsOpenHeader] = useState(false);
-  const [isOpenList, setIsOpenList] = useState(false);
-
   const openHeaderHandler = () => {
     setIsOpenHeader((prev) => !prev);
   };
 
-  const openListHandler = () => {
-    setIsOpenList((prev) => !prev);
-  };
-
-  const listOptionClickHandler = (event) => {
-    setActiveSortOption(event.target.innerText);
-  };
-
   return (
-    <Wrapper>
-      <Header onClick={children === 'Sort' ? openHeaderHandler : null}>
-        <Name>{children}</Name>
+    <OptionWrapper>
+      <OptionHeader onClick={openHeaderHandler}>
+        <OptionName>{name}</OptionName>
         <Drop $active={isOpenHeader}>
           <img src={arrowRight} alt="options" />
         </Drop>
-      </Header>
+      </OptionHeader>
       <Divider $active={isOpenHeader} />
-      <Action $active={isOpenHeader}>
-        <OptionName>{children} Results By</OptionName>
-        <List onClick={openListHandler}>
-          <Current>
-            <p>{activeSortOption}</p>
-            <Drop>
-              <img src={arrowRight} alt="options" />
-            </Drop>
-          </Current>
-          <ListOptions $active={isOpenList}>
-            {children === 'Sort' &&
-              options.map((option, id) => (
-                <OptionItem key={id} $active={activeSortOption === option} onClick={listOptionClickHandler}>
-                  {option}
-                </OptionItem>
-              ))}
-          </ListOptions>
-        </List>
-      </Action>
-    </Wrapper>
+      {isOpenHeader && children}
+    </OptionWrapper>
   );
 }
