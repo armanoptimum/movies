@@ -10,11 +10,6 @@ export const OptionWrapper = styled.div`
   border-radius: 0.6rem;
   border: 0.1rem solid var(--border-color);
   box-shadow: var(----box-shadow);
-  max-width: 100%;
-
-  @media (min-width: 56rem) {
-    max-width: 18rem;
-  }
 `;
 
 export const OptionHeader = styled.div`

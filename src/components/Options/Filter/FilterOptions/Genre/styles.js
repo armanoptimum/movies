@@ -8,7 +8,7 @@ export const GenreWrapper = styled.div`
 export const GenreOptionsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.7rem;
 `;
 
 export const GenreOption = styled.input`
