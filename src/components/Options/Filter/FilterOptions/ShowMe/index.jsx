@@ -1,19 +1,20 @@
-import { QuestionMark, ShowMeWrapper } from './styles';
+import { ShowMeWrapper } from './styles';
 import {
+  QuestionMark,
   FilterOptionHeaderName,
   FilterHeaderWrapper,
   RadioCheckboxGroup,
   RadioCheckboxOption,
   Radio,
   Label,
-} from '../../styles';
+} from '@/components/Options/Filter/styles';
 
 export default function ShowMe() {
   return (
     <ShowMeWrapper>
       <FilterHeaderWrapper>
         <FilterOptionHeaderName>Show Me</FilterOptionHeaderName>
-        <QuestionMark />
+        <QuestionMark data-tooltip="Log in to filter items you've watched." />
       </FilterHeaderWrapper>
       <RadioCheckboxGroup>
         <RadioCheckboxOption>

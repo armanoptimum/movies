@@ -1,5 +1,6 @@
 import Certification from './FilterOptions/Certification';
 import Genre from './FilterOptions/Genre';
+import Language from './FilterOptions/Language';
 import RealeaseDate from './FilterOptions/RealeseDate';
 import ShowMe from './FilterOptions/ShowMe';
 import { FilterWrapper } from './styles';
@@ -11,6 +12,7 @@ export default function Filter() {
       <RealeaseDate />
       <Genre />
       <Certification />
+      <Language />
     </FilterWrapper>
   );
 }

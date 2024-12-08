@@ -5,7 +5,7 @@ import {
   Checkbox,
   Label,
   RadioCheckboxOption,
-} from '../../styles';
+} from '@/components/Options/Filter/styles';
 import { RealeaseDataWrapper } from './styles';
 
 export default function RealeaseDate() {

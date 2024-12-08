@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ShowMeWrapper = styled.div`
+export const LanguageWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;

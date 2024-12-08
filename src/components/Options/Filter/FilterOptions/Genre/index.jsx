@@ -1,4 +1,4 @@
-import { FilterOptionHeaderName, FilterHeaderWrapper } from '../../styles';
+import { FilterOptionHeaderName, FilterHeaderWrapper } from '@/components/Options/Filter/styles';
 import { genres } from './data';
 import { GenreOption, GenreOptionsWrapper, GenreWrapper } from './styles';
 
