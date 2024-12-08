@@ -18,7 +18,7 @@ export const SearchButton = styled.button`
   border: none;
   border-radius: 3rem;
   padding: var(--padding-small) var(--padding-medium);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small-plus);
   font-weight: 600;
   cursor: pointer;
   color: ${({ $active }) => ($active ? '#fff' : 'var(--text-color-muted)')};
