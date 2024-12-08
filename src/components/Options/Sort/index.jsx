@@ -1,11 +1,13 @@
-import { useState } from 'react';
-import { SortActionWrapper, SortyByList, CurrentSortOption, SortHeader } from './styles';
+import { useContext, useState } from 'react';
+import { SortActionWrapper, CurrentSortOption, SortHeader } from './styles';
 import arrowRight from '@/assets/arrow-right.svg';
 import { Drop } from '@/components/Options/Option/styles';
-import { DropDownOption, DropDownOptionList } from '@/components/Options/styles';
+import { DropDownOption, DropDownOptionList, FilterSortByList } from '@/components/Options/styles';
 import { sortOptions } from './data';
+import { MediaContex } from '@/components/Media/moviePrivider';
 
-export default function Sort({ activeSortOption, setActiveSortOption }) {
+export default function Sort() {
+  const { activeSortOption, setActiveSortOption } = useContext(MediaContex);
   const [isOpenList, setIsOpenList] = useState(false);
 
   const openListHandler = () => {
@@ -19,7 +21,7 @@ export default function Sort({ activeSortOption, setActiveSortOption }) {
   return (
     <SortActionWrapper>
       <SortHeader>Sort Results By</SortHeader>
-      <SortyByList onClick={openListHandler}>
+      <FilterSortByList onClick={openListHandler}>
         <CurrentSortOption>
           <p>{activeSortOption}</p>
           <Drop $active>
@@ -33,7 +35,7 @@ export default function Sort({ activeSortOption, setActiveSortOption }) {
             </DropDownOption>
           ))}
         </DropDownOptionList>
-      </SortyByList>
+      </FilterSortByList>
     </SortActionWrapper>
   );
 }

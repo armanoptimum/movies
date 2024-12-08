@@ -30,6 +30,18 @@ export const SearchButton = styled.button`
   }
 `;
 
+export const FilterSortByList = styled.div`
+  padding: var(--padding-small-extra) var(--padding-small);
+  background-color: var(--text-color-muted-light);
+  font-size: var(--font-size-small);
+  border-radius: 0.3rem;
+  position: relative;
+
+  &:hover {
+    background-color: var(--text-color-muted-medium);
+  }
+`;
+
 export const DropDownOptionList = styled.div`
   display: ${({ $active }) => ($active ? 'block' : 'none')};
   background-color: #fff;
