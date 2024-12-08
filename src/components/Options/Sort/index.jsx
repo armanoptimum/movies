@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { SortActionWrapper, SortyByList, CurrentSortOption, SortOptionList, SortOption, SortHeader } from './styles';
+import { SortActionWrapper, SortyByList, CurrentSortOption, SortHeader } from './styles';
 import arrowRight from '@/assets/arrow-right.svg';
-import { Drop } from '../Option/styles';
-import { options } from './utility';
+import { Drop } from '@/components/Options/Option/styles';
+import { DropDownOption, DropDownOptionList } from '@/components/Options/styles';
+import { sortOptions } from './data';
 
 export default function Sort({ activeSortOption, setActiveSortOption }) {
   const [isOpenList, setIsOpenList] = useState(false);
@@ -25,13 +26,13 @@ export default function Sort({ activeSortOption, setActiveSortOption }) {
             <img src={arrowRight} alt="options" />
           </Drop>
         </CurrentSortOption>
-        <SortOptionList $active={isOpenList}>
-          {options.map((option, id) => (
-            <SortOption key={id} $active={activeSortOption === option} onClick={listOptionClickHandler}>
+        <DropDownOptionList $active={isOpenList}>
+          {sortOptions.map((option, id) => (
+            <DropDownOption key={id} $active={activeSortOption === option} onClick={listOptionClickHandler}>
               {option}
-            </SortOption>
+            </DropDownOption>
           ))}
-        </SortOptionList>
+        </DropDownOptionList>
       </SortyByList>
     </SortActionWrapper>
   );

@@ -1,12 +1,3 @@
-export const options = [
-  'Popularity Descending',
-  'Popularity Ascending',
-  'Rating Descending',
-  'Rating Ascending',
-  'Release Date Descending',
-  'Release Date Ascending',
-];
-
 export const sortMovies = (arr, activeOption) => {
   if (!arr || arr.length === 0) return [];
 

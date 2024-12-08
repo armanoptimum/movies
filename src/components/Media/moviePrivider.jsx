@@ -1,10 +1,10 @@
 import { createContext, useState } from 'react';
-import { options } from '../Options/Sort/utility';
+import { sortOptions } from '@/components/Options/Sort/data';
 
 export const MediaContex = createContext();
 
 export default function MediaProvider({ children }) {
-  const [activeSortOption, setActiveSortOption] = useState(options[0]);
+  const [activeSortOption, setActiveSortOption] = useState(sortOptions[0]);
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState([]);
 
