@@ -11,9 +11,11 @@ export const ShowMeHeader = styled.div`
   font-size: var(--font-size-small);
   gap: 0.5rem;
   color: var(--text-color-muted);
+  margin-bottom: 0.5rem;
 `;
 
-export const ShowMeHeaderName = styled.p``;
+export const ShowMeHeaderName = styled.p`
+`;
 
 export const ShowMeHeaderQuestionMark = styled.span`
   display: flex;
@@ -61,4 +63,37 @@ export const ShowMeHeaderQuestionMark = styled.span`
     z-index: 9;
     filter: brightness(90%);
   }
+`;
+
+export const RadioGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+`;
+
+export const RadioOption = styled.label`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+
+export const RadioInput = styled.input`
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 0.15rem solid var(--text-color-muted-light);
+  border-radius: 50%;  
+  cursor: pointer;
+  transition: border-color 0.3s ease; 
+
+  &:checked {
+    border: 0.30rem solid var(--secondary-color); 
+  }
+`;
+
+
+export const RadioLabel = styled.label`
+ font-size: var(--font-size-small);
+  color: var(--text-color-dark-light);
 `;
