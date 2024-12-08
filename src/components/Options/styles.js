@@ -3,12 +3,8 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 9rem;
+  min-width: 19rem;
   gap: 2rem;
-
-  @media (min-width: 28.5rem) {
-    min-width: 16rem;
-  }
 `;
 
 export const SearchButton = styled.button`
