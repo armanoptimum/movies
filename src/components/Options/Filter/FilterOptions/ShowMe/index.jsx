@@ -1,3 +1,4 @@
+import { showMeOptions } from './data';
 import { ShowMeWrapper } from './styles';
 import {
   QuestionMark,
@@ -16,19 +17,14 @@ export default function ShowMe() {
         <FilterOptionHeaderName>Show Me</FilterOptionHeaderName>
         <QuestionMark data-tooltip="Log in to filter items you've watched." />
       </FilterHeaderWrapper>
+
       <RadioCheckboxGroup>
-        <RadioCheckboxOption>
-          <Radio id="everything" type="radio" name="movies" value="everything" defaultChecked />
-          <Label htmlFor="everything">Everything</Label>
-        </RadioCheckboxOption>
-        <RadioCheckboxOption>
-          <Radio id="havent-seen" type="radio" name="movies" />
-          <Label htmlFor="havent-seen">Movies I Havent Seen</Label>
-        </RadioCheckboxOption>
-        <RadioCheckboxOption>
-          <Radio id="seen" type="radio" name="movies" />
-          <Label htmlFor="seen">Movies I Have Seen</Label>
-        </RadioCheckboxOption>
+        {showMeOptions.map(({ id, value, label, defaultChecked }) => (
+          <RadioCheckboxOption key={id}>
+            <Radio id={id} type="radio" name="movies" value={value} defaultChecked={defaultChecked} />
+            <Label htmlFor={id}>{label}</Label>
+          </RadioCheckboxOption>
+        ))}
       </RadioCheckboxGroup>
     </ShowMeWrapper>
   );
