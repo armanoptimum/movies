@@ -21,7 +21,7 @@ export default function ShowMe() {
       <RadioCheckboxGroup>
         {showMeOptions.map(({ id, value, label, defaultChecked }) => (
           <RadioCheckboxOption key={id}>
-            <Radio id={id} type="radio" name="movies" value={value} defaultChecked={defaultChecked} />
+            <Radio id={id} type="radio" name="show-me" value={value} defaultChecked={defaultChecked} />
             <Label htmlFor={id}>{label}</Label>
           </RadioCheckboxOption>
         ))}
