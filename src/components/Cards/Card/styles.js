@@ -37,4 +37,10 @@ export const ThreeDots = styled.img`
   }
 `;
 
-export const MovieImg = styled.img``;
+export const MovieImg = styled.img`
+  min-height: 100%;
+  
+  @media (min-width: 56rem) {
+    min-height: 12rem;
+  }
+`;
