@@ -44,7 +44,6 @@ export default function RealeaseDate() {
             <Date onChange={onSetToDate} id="to" />
           </DateWrapper>
         </Dates>
-        
       </RadioCheckboxGroup>
     </RealeaseDataWrapper>
   );

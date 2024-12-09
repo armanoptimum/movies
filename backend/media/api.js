@@ -1,7 +1,6 @@
-import { ENG_LANG_QUERY, GENRES_ENDPOINT, POPULAR_MOVIES_ENDPOINT } from "./constants";
+import { ENG_LANG_QUERY, GENRES_ENDPOINT, POPULAR_MOVIES_ENDPOINT } from './constants';
 
 const { VITE_APP_AUTORIZATION, VITE_APP_API_BASE_URL } = import.meta.env;
-
 
 const mediafetch = async (endpoint, queries = '') => {
   const url = `${VITE_APP_API_BASE_URL}/${endpoint}?${queries}`;
@@ -22,7 +21,6 @@ const mediafetch = async (endpoint, queries = '') => {
     return null;
   }
 };
-
 
 const fetchMovies = async (page) => {
   const endpoint = POPULAR_MOVIES_ENDPOINT;

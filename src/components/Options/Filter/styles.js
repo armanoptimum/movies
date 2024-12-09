@@ -75,7 +75,7 @@ export const Date = styled.input.attrs({
   text-align: center;
   background-color: var(--text-color-light);
   color: var(--text-color-dark);
-  
+
   &:focus {
     outline: none;
     border-color: var(--secondary-color);

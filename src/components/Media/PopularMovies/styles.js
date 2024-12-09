@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.main`
   padding: var(--padding-medium);
   background-color: #fff;
- 
+
   @media (min-width: 56rem) {
     padding: var(--padding-medium) var(--padding-large);
   }
