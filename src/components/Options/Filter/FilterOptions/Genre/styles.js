@@ -12,8 +12,9 @@ export const GenreOptionsWrapper = styled.div`
 `;
 
 export const GenreOption = styled.input`
-  background-color: var(--text-color-light);
+  background-color: ${({ $active }) => $active ? 'var(--secondary-color)' : 'var(--text-color-light)'};
   border-radius: 3rem;
+  color: ${({ $active }) => $active ? 'var(--text-color-light)' : ''};
   border: 0.01rem solid var(--text-color-muted);
   padding: var(--padding-small-extra-extra) var(--padding-small-extra);
 

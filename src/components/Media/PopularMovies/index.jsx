@@ -7,7 +7,7 @@ import { MediaContex } from '../moviePrivider';
 import { fetchMovies } from '@backend/media/api';
 
 export default function PopularMovies() {
-  const { activeSortOption, page, movies, setMovies } = useContext(MediaContex);
+  const { activeSortOption, page, movies, setMovies, selectedGenres } = useContext(MediaContex);
 
   useEffect(() => {
     fetchMovies(page)
@@ -25,7 +25,15 @@ export default function PopularMovies() {
   }, [page, setMovies]);
 
   const onSearchHandler = () => {
-    setMovies(sortMovies(movies, activeSortOption));
+    let filteredMovies = [...movies]; 
+    if (selectedGenres.length > 0) {
+      const selectedGenreIds = selectedGenres.map(genre => +genre.id);
+        filteredMovies = filteredMovies.filter((movie) => {
+          return movie.genre_ids.some(genre_id => selectedGenreIds.includes(genre_id));
+        });
+      }
+      filteredMovies = sortMovies(filteredMovies, activeSortOption); 
+      setMovies(filteredMovies);     
   };
 
   return (

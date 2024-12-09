@@ -9,6 +9,8 @@ export default function MediaProvider({ children }) {
   const [activeLanguageOption, setActiveLanguageOption] = useState(languageOptions[0]);
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState([]);
+  const [genres, setGenres] = useState([]);
+  const [selectedGenres, setSelectedGenres] = useState([]);
 
   const contexValue = {
     activeSortOption,
@@ -19,6 +21,10 @@ export default function MediaProvider({ children }) {
     setMovies,
     activeLanguageOption,
     setActiveLanguageOption,
+    selectedGenres,
+    setSelectedGenres,
+    setGenres,
+    genres
   };
   return <MediaContex.Provider value={contexValue}>{children}</MediaContex.Provider>;
 }
