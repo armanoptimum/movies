@@ -5,9 +5,10 @@ import { Wrapper, Title, Content } from './styles';
 import { sortMovies } from '@/components/Options/Sort/utility';
 import { MediaContex } from '../moviePrivider';
 import { fetchMovies } from '@backend/media/api';
+import { filterByDateRange, filterByGenres } from './utility';
 
 export default function PopularMovies() {
-  const { activeSortOption, page, movies, setMovies, selectedGenres } = useContext(MediaContex);
+  const { activeSortOption, page, movies, setMovies, selectedGenres, fromDate, toDate } = useContext(MediaContex);
 
   useEffect(() => {
     fetchMovies(page)
@@ -26,12 +27,8 @@ export default function PopularMovies() {
 
   const onSearchHandler = () => {
     let filteredMovies = [...movies];
-    if (selectedGenres.length > 0) {
-      const selectedGenreIds = selectedGenres.map((genre) => +genre.id);
-      filteredMovies = filteredMovies.filter((movie) => {
-        return movie.genre_ids.some((genre_id) => selectedGenreIds.includes(genre_id));
-      });
-    }
+    filteredMovies = filterByGenres(filteredMovies, selectedGenres);
+    filteredMovies = filterByDateRange(filteredMovies, fromDate, toDate);
     filteredMovies = sortMovies(filteredMovies, activeSortOption);
     setMovies(filteredMovies);
   };
