@@ -15,7 +15,10 @@ export default function PopularMovies() {
       .then((moviesData) => {
         if (moviesData.length > 0) {
           setMovies((prevMovies) => {
-            const newMovies = moviesData.filter((movie) => !prevMovies.some((prevMovie) => prevMovie.id === movie.id));
+            let newMovies = moviesData.filter((movie) => !prevMovies.some((prevMovie) => prevMovie.id === movie.id));
+            newMovies = filterByGenres(newMovies, selectedGenres);
+            newMovies = filterByDateRange(newMovies, fromDate, toDate);
+            newMovies = sortMovies(newMovies, activeSortOption);
             return [...prevMovies, ...newMovies];
           });
         }
