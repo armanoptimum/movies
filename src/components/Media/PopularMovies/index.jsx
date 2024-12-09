@@ -5,16 +5,20 @@ import { Wrapper, Title, Content } from './styles';
 import { sortMovies } from '@/components/Options/Sort/utility';
 import { MediaContex } from '../moviePrivider';
 import { fetchMovies } from '@backend/media/api';
+import { filterByDateRange, filterByGenres } from './utility';
 
 export default function PopularMovies() {
-  const { activeSortOption, page, movies, setMovies } = useContext(MediaContex);
+  const { activeSortOption, page, movies, setMovies, selectedGenres, fromDate, toDate } = useContext(MediaContex);
 
   useEffect(() => {
     fetchMovies(page)
       .then((moviesData) => {
         if (moviesData.length > 0) {
           setMovies((prevMovies) => {
-            const newMovies = moviesData.filter((movie) => !prevMovies.some((prevMovie) => prevMovie.id === movie.id));
+            let newMovies = moviesData.filter((movie) => !prevMovies.some((prevMovie) => prevMovie.id === movie.id));
+            newMovies = filterByGenres(newMovies, selectedGenres);
+            newMovies = filterByDateRange(newMovies, fromDate, toDate);
+            newMovies = sortMovies(newMovies, activeSortOption);
             return [...prevMovies, ...newMovies];
           });
         }
@@ -25,7 +29,11 @@ export default function PopularMovies() {
   }, [page, setMovies]);
 
   const onSearchHandler = () => {
-    setMovies(sortMovies(movies, activeSortOption));
+    let filteredMovies = [...movies];
+    filteredMovies = filterByGenres(filteredMovies, selectedGenres);
+    filteredMovies = filterByDateRange(filteredMovies, fromDate, toDate);
+    filteredMovies = sortMovies(filteredMovies, activeSortOption);
+    setMovies(filteredMovies);
   };
 
   return (

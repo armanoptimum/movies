@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { OptionWrapper, OptionHeader, OptionName, Drop, Divider } from './styles';
-import arrowRight from '@/assets/arrow-right.svg';
+import arrowRight from '@/assets/icons/arrow-right.svg';
 
 export default function Option({ children, name }) {
   const [isOpenHeader, setIsOpenHeader] = useState(false);

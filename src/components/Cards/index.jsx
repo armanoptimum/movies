@@ -15,7 +15,7 @@ export default function Cards() {
       const buttonPosition = buttonRef.current.getBoundingClientRect();
       const isButtonVisible = buttonPosition.top <= window.innerHeight && buttonPosition.bottom >= 0;
       if (isButtonVisible) {
-        buttonRef.current.click();
+        loadMoreHandler();
         window.removeEventListener('scroll', handleScroll);
       }
     }

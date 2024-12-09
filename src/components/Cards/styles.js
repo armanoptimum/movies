@@ -7,6 +7,7 @@ export const CardsWrapper = styled.div`
   margin-top: 3rem;
   gap: 2rem;
   width: 100%;
+  height: 100%;
 
   @media (min-width: 56rem) {
     grid-template-columns: repeat(2, 1fr);

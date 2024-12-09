@@ -1,10 +1,13 @@
-import { useState } from 'react';
-import { SortActionWrapper, SortyByList, CurrentSortOption, SortOptionList, SortOption, SortHeader } from './styles';
-import arrowRight from '@/assets/arrow-right.svg';
-import { Drop } from '../Option/styles';
-import { options } from './utility';
+import { useContext, useState } from 'react';
+import { SortActionWrapper, CurrentSortOption, SortHeader } from './styles';
+import arrowRight from '@/assets/icons/arrow-right.svg';
+import { Drop } from '@/components/Options/Option/styles';
+import { DropDownOption, DropDownOptionList, FilterSortByList } from '@/components/Options/styles';
+import { sortOptions } from './data';
+import { MediaContex } from '@/components/Media/moviePrivider';
 
-export default function Sort({ activeSortOption, setActiveSortOption }) {
+export default function Sort() {
+  const { activeSortOption, setActiveSortOption } = useContext(MediaContex);
   const [isOpenList, setIsOpenList] = useState(false);
 
   const openListHandler = () => {
@@ -18,21 +21,21 @@ export default function Sort({ activeSortOption, setActiveSortOption }) {
   return (
     <SortActionWrapper>
       <SortHeader>Sort Results By</SortHeader>
-      <SortyByList onClick={openListHandler}>
+      <FilterSortByList onClick={openListHandler}>
         <CurrentSortOption>
           <p>{activeSortOption}</p>
           <Drop $active>
             <img src={arrowRight} alt="options" />
           </Drop>
         </CurrentSortOption>
-        <SortOptionList $active={isOpenList}>
-          {options.map((option, id) => (
-            <SortOption key={id} $active={activeSortOption === option} onClick={listOptionClickHandler}>
+        <DropDownOptionList $active={isOpenList}>
+          {sortOptions.map((option, id) => (
+            <DropDownOption key={id} $active={activeSortOption === option} onClick={listOptionClickHandler}>
               {option}
-            </SortOption>
+            </DropDownOption>
           ))}
-        </SortOptionList>
-      </SortyByList>
+        </DropDownOptionList>
+      </FilterSortByList>
     </SortActionWrapper>
   );
 }

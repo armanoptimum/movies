@@ -1,14 +1,13 @@
-import logo from '@/assets/logo2.svg';
-import FooterNav from './FooterNav';
+import logo from '@/assets/icons/logo2.svg';
 import FooterNavItem from './FooterNavItem';
-import { FooterWrapper } from './styles';
+import { FooterWrapper, FooterNavWrapper } from './styles';
 import footerData from './data';
 import { FooterNavItemButton, FooterNavItemImg, FooterNavItemLink, FooterNavItemWrapper } from './FooterNavItem/styles';
 
 export default function Footer() {
   return (
     <FooterWrapper>
-      <FooterNav>
+      <FooterNavWrapper>
         <FooterNavItemWrapper>
           <FooterNavItemLink href="/">
             <FooterNavItemImg src={logo} alt={'logo'} />
@@ -18,17 +17,17 @@ export default function Footer() {
         <FooterNavItemWrapper>
           <FooterNavItemButton>Join The Comunity</FooterNavItemButton>
         </FooterNavItemWrapper>
-      </FooterNav>
+      </FooterNavWrapper>
 
       {footerData.map((section, index) => (
-        <FooterNav key={index}>
+        <FooterNavWrapper key={index}>
           <FooterNavItem header>{section.section}</FooterNavItem>
           {section.items.map((item, itemIndex) => (
             <FooterNavItem key={itemIndex} goTo={item.goTo}>
               {item.name}
             </FooterNavItem>
           ))}
-        </FooterNav>
+        </FooterNavWrapper>
       ))}
     </FooterWrapper>
   );

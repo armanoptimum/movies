@@ -5,6 +5,5 @@ import { categoryMap } from './data';
 export default function MovieCategory() {
   const { category } = useParams();
   const Component = categoryMap[category] || NotAvailable;
-
-  return <Component />;
+  return Component === NotAvailable ? <NotAvailable>{category} page is not available</NotAvailable> : <Component />;
 }

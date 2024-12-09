@@ -16,3 +16,8 @@ export const FooterWrapper = styled.footer`
     justify-content: center;
   }
 `;
+
+export const FooterNavWrapper = styled.ul`
+  list-style-type: none;
+  position: relative;
+`;

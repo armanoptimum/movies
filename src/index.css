@@ -18,6 +18,7 @@
   --primary-color-burger: rgba(4, 38, 66, 0.9);
   --secondary-color: #05b4e4;
   --text-color-dark: #000;
+  --text-color-dark-light: #333;
   --text-color-light: #fff;
   --text-color-muted: #666666;
   --text-color-muted-light: #dee2e6;
@@ -29,6 +30,7 @@
   --font-size-small-plus: 1rem;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.4rem;
+  --padding-small-extra-extra: 0.3rem;
   --padding-small-extra: 0.7rem;
   --padding-small: 1rem;
   --padding-medium: 1.3rem;
