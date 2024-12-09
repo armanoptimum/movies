@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import CardActions from './CardActions';
 import { CardWrapper, MovieImg, ThreeDots } from './styles';
-import threeDots from '@/assets/three-dots.svg';
+import threeDots from '@/assets/icons/three-dots.svg';
 import MovieInfo from './MovieInfo';
-import defaultImage from '@/assets/default.png';
+import defaultImage from '@/assets/images/default.png';
 
 export default function Card({ movieName, description, date, img, rating }) {
   const [active, setActive] = useState(false);

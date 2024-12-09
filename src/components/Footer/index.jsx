@@ -1,4 +1,4 @@
-import logo from '@/assets/logo2.svg';
+import logo from '@/assets/icons/logo2.svg';
 import FooterNav from './FooterNav';
 import FooterNavItem from './FooterNavItem';
 import { FooterWrapper } from './styles';

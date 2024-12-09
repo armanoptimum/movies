@@ -1,6 +1,6 @@
-import searchIcon from '@/assets/search.svg';
-import personIcon from '@/assets/person.svg';
-import addIcon from '@/assets/add.svg';
+import searchIcon from '@/assets/icons/search.svg';
+import personIcon from '@/assets/icons/person.svg';
+import addIcon from '@/assets/icons/add.svg';
 
 export const itemsWithDropDown = [
   {

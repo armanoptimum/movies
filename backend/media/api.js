@@ -22,7 +22,7 @@ const mediafetch = async (endpoint, queries = '') => {
   }
 };
 
-const fetchMovies = async (page) => {
+const fetchMovies = async (page = 1) => {
   const endpoint = POPULAR_MOVIES_ENDPOINT;
   const queries = `${ENG_LANG_QUERY}&page=${page}`;
   const data = await mediafetch(endpoint, queries);

@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { SortActionWrapper, CurrentSortOption, SortHeader } from './styles';
-import arrowRight from '@/assets/arrow-right.svg';
+import arrowRight from '@/assets/icons/arrow-right.svg';
 import { Drop } from '@/components/Options/Option/styles';
 import { DropDownOption, DropDownOptionList, FilterSortByList } from '@/components/Options/styles';
 import { sortOptions } from './data';

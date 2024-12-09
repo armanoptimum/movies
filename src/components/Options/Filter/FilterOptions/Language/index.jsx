@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { Drop } from '@/components/Options/Option/styles';
 import { LanguageWrapper, CurrentFilterOption } from './styles';
 import { QuestionMark, FilterOptionHeaderName, FilterHeaderWrapper } from '@/components/Options/Filter/styles';
-import arrowRight from '@/assets/arrow-right.svg';
+import arrowRight from '@/assets/icons/arrow-right.svg';
 import { DropDownOption, DropDownOptionList, FilterSortByList } from '@/components/Options/styles';
 import { languageOptions } from './data';
 import { MediaContex } from '@/components/Media/moviePrivider';
