@@ -53,8 +53,8 @@ export const Checkbox = styled.input`
   border: 0.1rem solid var(--text-color-muted-light);
   background-color: white;
   transition:
-  border-color 0.3s ease,
-  background-color 0.3s ease;
+    border-color 0.3s ease,
+    background-color 0.3s ease;
   cursor: pointer;
   background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27var%28--kendo-color-on-primary%2C%20%23ffffff%29%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27M6%2010l3%203l6-6%27/%3e%3c/svg%3e');
 
