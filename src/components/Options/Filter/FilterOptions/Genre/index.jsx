@@ -15,12 +15,11 @@ export default function Genre() {
         console.error(err);
       });
   }, [selectedGenres]);
- 
 
   const handleClick = (event) => {
     const genreId = event.target.id;
     const genreName = event.target.value;
-  
+
     setSelectedGenres((prev) => {
       const isGenreSelected = prev.some((genre) => genre.id === genreId);
       if (isGenreSelected) {
@@ -38,7 +37,14 @@ export default function Genre() {
       </FilterHeaderWrapper>
       <GenreOptionsWrapper>
         {genres.map(({ name, id }) => (
-          <GenreOption $active={selectedGenres.some(genre => +genre.id === id)} onClick={handleClick} id={id} key={id} type="button" value={name} />
+          <GenreOption
+            $active={selectedGenres.some((genre) => +genre.id === id)}
+            onClick={handleClick}
+            id={id}
+            key={id}
+            type="button"
+            value={name}
+          />
         ))}
       </GenreOptionsWrapper>
     </GenreWrapper>

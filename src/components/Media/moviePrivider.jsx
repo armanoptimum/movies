@@ -24,7 +24,7 @@ export default function MediaProvider({ children }) {
     selectedGenres,
     setSelectedGenres,
     setGenres,
-    genres
+    genres,
   };
   return <MediaContex.Provider value={contexValue}>{children}</MediaContex.Provider>;
 }

@@ -25,15 +25,15 @@ export default function PopularMovies() {
   }, [page, setMovies]);
 
   const onSearchHandler = () => {
-    let filteredMovies = [...movies]; 
+    let filteredMovies = [...movies];
     if (selectedGenres.length > 0) {
-      const selectedGenreIds = selectedGenres.map(genre => +genre.id);
-        filteredMovies = filteredMovies.filter((movie) => {
-          return movie.genre_ids.some(genre_id => selectedGenreIds.includes(genre_id));
-        });
-      }
-      filteredMovies = sortMovies(filteredMovies, activeSortOption); 
-      setMovies(filteredMovies);     
+      const selectedGenreIds = selectedGenres.map((genre) => +genre.id);
+      filteredMovies = filteredMovies.filter((movie) => {
+        return movie.genre_ids.some((genre_id) => selectedGenreIds.includes(genre_id));
+      });
+    }
+    filteredMovies = sortMovies(filteredMovies, activeSortOption);
+    setMovies(filteredMovies);
   };
 
   return (

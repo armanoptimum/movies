@@ -2,7 +2,7 @@ const { VITE_APP_AUTORIZATION, VITE_APP_API_BASE_URL } = import.meta.env;
 
 const fetchMovies = async (page) => {
   const baseUrl = VITE_APP_API_BASE_URL;
-  const endpoint = 'movie/popular'
+  const endpoint = 'movie/popular';
   const queries = `language=en-US&page=${page}`;
   const url = `${baseUrl}/${endpoint}?${queries}`;
   const options = {
@@ -27,7 +27,7 @@ const fetchMovies = async (page) => {
 
 const fetchGenres = async () => {
   const baseUrl = VITE_APP_API_BASE_URL;
-  const endpoint = 'genre/movie/list'
+  const endpoint = 'genre/movie/list';
   const queries = `language=en-US`;
   const url = `${baseUrl}/${endpoint}?${queries}`;
   const options = {
