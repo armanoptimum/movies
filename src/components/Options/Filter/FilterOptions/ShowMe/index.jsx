@@ -1,3 +1,4 @@
+import { TOOLTIP_SHOWME } from './constants';
 import { showMeOptions } from './data';
 import { ShowMeWrapper } from './styles';
 import {
@@ -15,7 +16,7 @@ export default function ShowMe() {
     <ShowMeWrapper>
       <FilterHeaderWrapper>
         <FilterOptionHeaderName>Show Me</FilterOptionHeaderName>
-        <QuestionMark data-tooltip="Log in to filter items you've watched." />
+        <QuestionMark data-tooltip={TOOLTIP_SHOWME} />
       </FilterHeaderWrapper>
 
       <RadioCheckboxGroup>

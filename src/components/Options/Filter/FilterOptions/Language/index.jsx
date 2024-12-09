@@ -6,6 +6,7 @@ import arrowRight from '@/assets/icons/arrow-right.svg';
 import { DropDownOption, DropDownOptionList, FilterSortByList } from '@/components/Options/styles';
 import { languageOptions } from './data';
 import { MediaContex } from '@/components/Media/moviePrivider';
+import { TOOLTIP_LANGUAGE } from './constants';
 
 export default function Language() {
   const { activeLanguageOption, setActiveLanguageOption } = useContext(MediaContex);
@@ -23,7 +24,7 @@ export default function Language() {
     <LanguageWrapper>
       <FilterHeaderWrapper>
         <FilterOptionHeaderName>Language</FilterOptionHeaderName>
-        <QuestionMark data-tooltip="Filter items based on their original language." />
+        <QuestionMark data-tooltip={TOOLTIP_LANGUAGE} />
       </FilterHeaderWrapper>
 
       <FilterSortByList onClick={openListHandler}>
