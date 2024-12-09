@@ -74,14 +74,12 @@ export const Date = styled.input.attrs({
   font-size: var(--font-size-small);
   text-align: center;
   background-color: var(--text-color-light);
-  color: #333;
-  &::placeholder {
-    color: #aaa;
-  }
+  color: var(--text-color-dark);
+  
   &:focus {
     outline: none;
-    border-color: #007bff;
-    background-color: #fff;
+    border-color: var(--secondary-color);
+    background-color: var(--text-color-muted-light);
   }
 `;
 
