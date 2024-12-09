@@ -15,12 +15,12 @@ export default function RealeaseDate() {
   const { setFromDate, setToDate } = useContext(MediaContex);
 
   const onSetFromDate = (event) => {
-    setFromDate(event.target.value)
-  }
+    setFromDate(event.target.value);
+  };
 
   const onSetToDate = (event) => {
-    setToDate(event.target.value)
-  }
+    setToDate(event.target.value);
+  };
 
   return (
     <RealeaseDataWrapper>
@@ -44,7 +44,6 @@ export default function RealeaseDate() {
             <Date onChange={onSetToDate} id="to" />
           </DateWrapper>
         </Dates>
-        
       </RadioCheckboxGroup>
     </RealeaseDataWrapper>
   );
