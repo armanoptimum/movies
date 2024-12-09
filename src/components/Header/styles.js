@@ -34,20 +34,13 @@ export const HeaderNavWrapper = styled.ul`
   }
 
   &:nth-of-type(1) {
-    li:nth-child(1),
-    li:nth-child(3),
-    li:nth-child(4),
-    li:nth-child(5),
-    li:nth-child(6) {
+    li:not(:nth-child(2)) {
       display: none;
     }
   }
 
   &:nth-of-type(3) {
-    li:nth-child(1),
-    li:nth-child(2),
-    li:nth-child(3),
-    li:nth-child(4) {
+    li:nth-child(-n + 4) {
       display: none;
     }
   }
@@ -56,20 +49,13 @@ export const HeaderNavWrapper = styled.ul`
     display: flex;
 
     &:nth-of-type(1) {
-      li:nth-child(1),
-      li:nth-child(3),
-      li:nth-child(4),
-      li:nth-child(5),
-      li:nth-child(6) {
+      li:nth-child(-n + 6) {
         display: flex;
       }
     }
 
     &:nth-of-type(3) {
-      li:nth-child(1),
-      li:nth-child(2),
-      li:nth-child(3),
-      li:nth-child(4) {
+      li:nth-child(-n + 4) {
         display: flex;
       }
     }

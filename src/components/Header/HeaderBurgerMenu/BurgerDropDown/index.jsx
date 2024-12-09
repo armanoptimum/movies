@@ -1,6 +1,12 @@
 import { BurgerDropDownLink, BurgerDropDownLinkWrapper, BurgerDropDownName, BurgerDropDownWrapper } from './styles';
 
-export default function BurgerDropDown({ dropDownItems = [], children = '', href = '#', isActiveDropDown, handleToggleDropdown }) {
+export default function BurgerDropDown({
+  dropDownItems = [],
+  children = '',
+  href = '#',
+  isActiveDropDown,
+  handleToggleDropdown,
+}) {
   return (
     <BurgerDropDownWrapper $isActiveDropDown>
       <BurgerDropDownName onClick={handleToggleDropdown}>{children}</BurgerDropDownName>
