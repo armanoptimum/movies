@@ -6,7 +6,6 @@ export const filterByGenres = (movies, selectedGenres) => {
 };
 
 export const filterByDateRange = (movies, fromDate, toDate) => {
-  console.log(toDate)
   return movies.filter((movie) => {
     const releaseDate = movie.release_date;
 
