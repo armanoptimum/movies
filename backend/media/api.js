@@ -1,10 +1,10 @@
+import { ENG_LANG_QUERY, GENRES_ENDPOINT, POPULAR_MOVIES_ENDPOINT } from "./constants";
+
 const { VITE_APP_AUTORIZATION, VITE_APP_API_BASE_URL } = import.meta.env;
 
-const fetchMovies = async (page) => {
-  const baseUrl = VITE_APP_API_BASE_URL;
-  const endpoint = 'movie/popular';
-  const queries = `language=en-US&page=${page}`;
-  const url = `${baseUrl}/${endpoint}?${queries}`;
+
+const mediafetch = async (endpoint, queries = '') => {
+  const url = `${VITE_APP_API_BASE_URL}/${endpoint}?${queries}`;
   const options = {
     method: 'GET',
     headers: {
@@ -12,42 +12,30 @@ const fetchMovies = async (page) => {
       Authorization: `Bearer ${VITE_APP_AUTORIZATION}`,
     },
   };
+
   try {
     const response = await fetch(url, options);
     const data = await response.json();
-    if (!data.results) {
-      return [];
-    }
-    return data.results;
+    return data;
   } catch (error) {
-    console.error('Error fetching data:', error);
-    return [];
+    console.error('Error making API call:', error);
+    return null;
   }
 };
 
+
+const fetchMovies = async (page) => {
+  const endpoint = POPULAR_MOVIES_ENDPOINT;
+  const queries = `${ENG_LANG_QUERY}&page=${page}`;
+  const data = await mediafetch(endpoint, queries);
+  return data?.results || [];
+};
+
 const fetchGenres = async () => {
-  const baseUrl = VITE_APP_API_BASE_URL;
-  const endpoint = 'genre/movie/list';
-  const queries = `language=en-US`;
-  const url = `${baseUrl}/${endpoint}?${queries}`;
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${VITE_APP_AUTORIZATION}`,
-    },
-  };
-  try {
-    const response = await fetch(url, options);
-    const data = await response.json();
-    if (!data.genres) {
-      return [];
-    }
-    return data.genres;
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return [];
-  }
+  const endpoint = GENRES_ENDPOINT;
+  const queries = ENG_LANG_QUERY;
+  const data = await mediafetch(endpoint, queries);
+  return data?.genres || [];
 };
 
 export { fetchMovies, fetchGenres };
