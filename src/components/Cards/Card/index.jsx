@@ -5,7 +5,7 @@ import threeDots from '@/assets/icons/three-dots.svg';
 import MovieInfo from './MovieInfo';
 import defaultImage from '@/assets/images/default.png';
 
-export default function Card({ movieName, description, date, img, rating }) {
+export default function Card({ movieName = '', description = '', date = '', img, rating = 0 }) {
   const [active, setActive] = useState(false);
   const [imageSrc, setImageSrc] = useState(defaultImage);
 

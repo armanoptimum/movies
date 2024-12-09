@@ -1,6 +1,6 @@
 import { MovieInfoWrapper, MovieName, MovieRatingWrapper, PerCentIcon, MovieDate, MovieDescription } from './styles';
 
-export default function MovieInfo({ rating, movieName, date, description }) {
+export default function MovieInfo({ rating = 0, movieName = '', date = '', description = '' }) {
   return (
     <MovieInfoWrapper>
       <MovieRatingWrapper>
